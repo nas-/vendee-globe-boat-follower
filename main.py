@@ -119,7 +119,7 @@ def mainloop():
         print('----------------------')
         plot(datafile)
         driver.quit()
-    except Exception as e:
+    except Exception as e:  # Hehe this is fine
         print(e)
         driver.close()
         driver.quit()
