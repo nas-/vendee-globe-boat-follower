@@ -126,7 +126,7 @@ def mainloop():
 
 
 if __name__ == "__main__":
-    WAIT_TIME_SECONDS = 600
+    WAIT_TIME_SECONDS = 900
     mainloop()
     ticker = threading.Event()
     while not ticker.wait(WAIT_TIME_SECONDS):
