@@ -3,8 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-with open('data.json') as json_file:
-    datafile = json.load(json_file)
+
 
 
 def plot(data_file):
@@ -30,4 +29,6 @@ def plot(data_file):
 
 
 if __name__ == "__main__":
+    with open('data.json') as json_file:
+        datafile = json.load(json_file)
     plot(datafile)

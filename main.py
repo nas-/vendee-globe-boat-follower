@@ -31,13 +31,13 @@ def mainloop():
     try:
 
         driver.maximize_window()
-        # driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-        # "source": """
-        # Object.defineProperty(navigator, 'webdriver', {
-        # get: () => undefined
-        # })
-        # """
-        # })
+        driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+        "source": """
+        Object.defineProperty(navigator, 'webdriver', {
+        get: () => undefined
+        })
+        """
+        })
 
         print(f'starting run {datetime.datetime.now()}')
         if not os.path.isfile('data.json'):
@@ -115,7 +115,8 @@ def mainloop():
         print('----------------------')
         print(f'starting run {datetime.datetime.now()}')
         for item in datafile:
-            handle_data(item, datafile[item][-1])
+            if datafile[item]:
+                handle_data(item, datafile[item][-1])
         print('----------------------')
         plot(datafile)
         driver.quit()

@@ -31,8 +31,8 @@ def unpack_boats(boats_response):
 def handle_data(boatname, boatdict, datafile=None):
     lat_decimal = len(boatdict.get('LAT').split('.')[1])
     lon_decimal = len(boatdict.get('LON').split('.')[1])
-    LAT = str(round(float(boatdict.get('LAT')), 4)).ljust(13 - lat_decimal, '0').rjust(9, ' ')
-    LON = str(round(float(boatdict.get('LON')), 4)).ljust(13 - lon_decimal, '0').rjust(9, ' ')
+    LAT = str(round(float(boatdict.get('LAT')), 4)).ljust(8, '0').rjust(9, ' ')
+    LON = str(round(float(boatdict.get('LON')), 4)).ljust(8, '0').rjust(9, ' ')
     SPEED = str(int(boatdict.get('SPEED')) / 10).rjust(4, ' ')
     HEADING = str(boatdict.get('HEADING')).rjust(3, ' ')
     TIME = datetime.datetime.fromtimestamp(boatdict.get('ELAPSED'))
