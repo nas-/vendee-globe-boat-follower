@@ -11,6 +11,8 @@ def unpack_boats(boats_response):
         item_dict = json.loads(boatdata)
         if type(item_dict) is not dict:
             continue
+        if len(item_dict) == 0:
+            continue
         test = item_dict.get('data')
         if test is None:
             continue
