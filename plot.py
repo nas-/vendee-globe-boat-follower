@@ -2,11 +2,15 @@ import json
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+import random
+from typing import Dict
 
 
+def plot(data_file: Dict) -> None:
+    """
 
-
-def plot(data_file):
+    :type data_file: Dict
+    """
     sns.set(rc={'figure.figsize': (11.7, 8.27)})
     df = pd.DataFrame()
     for record in data_file:
@@ -17,7 +21,13 @@ def plot(data_file):
 
     df[['LON', 'LAT', 'SPEED']] = df[['LON', 'LAT', 'SPEED']].astype(float)
     df['SPEED'] = df['SPEED'] / 10
+    all_boats = data_file.keys()
+    all_markers = [',', '.', 'o', 'v', '^', '<', '>', '8', 's', 'p', '*', 'h', 'H', 'D', 'd', 'P', 'X']
     markers = {"BOSS": "s", "APIVIA": "X", 'LINKED': "*", 'CAM': "o", 'ARKEA': 'o', 'BURTON': 'X', 'INITIATIVE': 'o'}
+    for boat in all_boats:
+        if boat not in markers.keys():
+            markers[boat] = random.choice(all_markers)
+
     plt.figure(figsize=(20, 10))
     sns_plot = sns.scatterplot(data=df, x='LON', y='LAT', style='BOAT', markers=markers, hue='SPEED', size='SPEED')
     for line in range(0, df.shape[0]):
