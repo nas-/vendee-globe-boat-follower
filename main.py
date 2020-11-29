@@ -7,9 +7,10 @@ import time
 from seleniumwire import webdriver
 
 from config import CONFIG
-from plot import plot
-from utils import unpack_boats, handle_data, save_data, get_data_from_prevpoint, \
+from src.plot import plot
+from src.utils import unpack_boats, handle_data, save_data, get_data_from_prevpoint, \
     get_data_from_prevpoint_with_boat_data
+from src.geojson_creator import create_geojson
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')
@@ -42,10 +43,10 @@ def mainloop():
     })
 
     print(f'starting run {datetime.datetime.now()}')
-    if not os.path.isfile('data.json'):
-        open('data.json', 'w+').write('{"BOSS":[]}')
+    if not os.path.isfile('src/data.json'):
+        open('src/data.json', 'w+').write('{"BOSS":[]}')
 
-    with open('data.json') as json_file:
+    with open('src/data.json') as json_file:
         datafile = json.load(json_file)
     # Higher zooms give better results. Lower zooms cover more maparea.
     driver.get('https://www.marinetraffic.com/en/ais/home/centerx:6.7/centery:-38.3/zoom:6')
@@ -124,6 +125,7 @@ def mainloop():
             handle_data(item, datafile[item][-1])
     print('----------------------')
     plot(datafile)
+    create_geojson(datafile)
     driver.quit()
     # except Exception as e:  # Hehe this is fine
     #     print(e)

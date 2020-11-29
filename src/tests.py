@@ -1,5 +1,5 @@
 from unittest import TestCase
-import utils
+from src import utils
 import datetime
 
 request = b'{"type":1,"data":{"rows":[{"LAT":"-42.8567","LON":"-29.80231","SPEED":"122","COURSE":"82","HEADING":"82",' \

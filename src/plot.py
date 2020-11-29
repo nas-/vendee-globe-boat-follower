@@ -23,7 +23,7 @@ def plot(data_file: Dict) -> None:
     df['SPEED'] = df['SPEED'] / 10
     all_boats = data_file.keys()
     all_markers = [',', '.', 'o', 'v', '^', '<', '>', '8', 's', 'p', '*', 'h', 'H', 'D', 'd', 'P', 'X']
-    markers = {"BOSS": "s", "APIVIA": "X", 'LINKED': "*", 'CAM': "o", 'ARKEA': 'o', 'BURTON': 'X', 'INITIATIVE': 'o'}
+    markers = {"BOSS": "s", "APIVIA": "X", 'LINKED': "*", 'CAM': "o"}
     for boat in all_boats:
         if boat not in markers.keys():
             markers[boat] = random.choice(all_markers)
