@@ -5,3 +5,4 @@ requests~=2.25.0
 selenium~=3.141.0
 selenium-wire
 mitmproxy
+geopy~=2.0.0

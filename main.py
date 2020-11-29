@@ -1,13 +1,15 @@
-from seleniumwire import webdriver
-import json
-import time
-import os
 import datetime
+import json
+import os
 import threading
+import time
 
-from utils import unpack_boats, handle_data, get_data_from_prevpoint, get_data_from_prevpoint_with_boat_data
-from plot import plot
+from seleniumwire import webdriver
+
 from config import CONFIG
+from plot import plot
+from utils import unpack_boats, handle_data, save_data, get_data_from_prevpoint, \
+    get_data_from_prevpoint_with_boat_data
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')
@@ -28,102 +30,105 @@ options = {
 
 def mainloop():
     driver = webdriver.Chrome('chromedriver', options=chrome_options, seleniumwire_options=options)
-    try:
+    # try:
 
-        driver.maximize_window()
-        driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+    driver.maximize_window()
+    driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
         "source": """
-        Object.defineProperty(navigator, 'webdriver', {
-        get: () => undefined
-        })
-        """
-        })
+    Object.defineProperty(navigator, 'webdriver', {
+    get: () => undefined
+    })
+    """
+    })
 
-        print(f'starting run {datetime.datetime.now()}')
-        if not os.path.isfile('data.json'):
-            open('data.json', 'w+').write('{"BOSS":[]}')
+    print(f'starting run {datetime.datetime.now()}')
+    if not os.path.isfile('data.json'):
+        open('data.json', 'w+').write('{"BOSS":[]}')
 
-        with open('data.json') as json_file:
-            datafile = json.load(json_file)
-
-        driver.get('https://www.marinetraffic.com/en/ais/home/centerx:-16.5/centery:-25.9/zoom:4')
+    with open('data.json') as json_file:
+        datafile = json.load(json_file)
+    # Higher zooms give better results. Lower zooms cover more maparea.
+    driver.get('https://www.marinetraffic.com/en/ais/home/centerx:6.7/centery:-38.3/zoom:6')
+    time.sleep(15)
+    requests_boats = [item.response.body for item in driver.requests if
+                      item.url.startswith('https://www.marinetraffic.com/getData')]
+    boats = unpack_boats(requests_boats)
+    if not boats:
+        driver.refresh()
         time.sleep(15)
+        # TODO change with loop.AttributeError: 'NoneType' object has no attribute 'body'
+        requests_boats = [item.response.body for item in driver.requests if
+                          item.url.startswith('https://www.marinetraffic.com/getData')]
+        boats = unpack_boats(requests_boats)
+    boats_to_retrieve = [item for item in CONFIG]
+    boats_to_remove = []
+    for item in boats_to_retrieve:
+        if not datafile.get(item):
+            datafile[item] = []
+            prevpoints = []
+        else:
+            prevpoints = datafile[item]
+        if prevpoints:
+            selected_boat, boats = get_data_from_prevpoint_with_boat_data(prevpoints[-1], item, boats, datafile)
+            if selected_boat:
+                boats_to_remove.append(item)
+
+    boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
+    boats_to_remove = []
+    print(f'finished_general retrieval - missing {boats_to_retrieve}')
+
+    for item in boats_to_retrieve:
+        if not datafile.get(item):
+            datafile[item] = []
+            prevpoints = []
+        else:
+            prevpoints = datafile[item]
+        if prevpoints:
+            lastdata = prevpoints[-1]
+            a, b = get_data_from_prevpoint(driver, lastdata, item, datafile)
+            if a:
+                boats_to_remove.append(item)
+
+    boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
+    print(f'finished retrieval based on last position - missing {boats_to_retrieve}')
+
+    for item in boats_to_retrieve:
+        del driver.requests
+        driver.get(CONFIG.get(item))
+        time.sleep(20)
         requests_boats = [item.response.body for item in driver.requests if
                           item.url.startswith('https://www.marinetraffic.com/getData')]
         boats = unpack_boats(requests_boats)
         if not boats:
-            driver.refresh()
-            time.sleep(15)
-            requests_boats = [item.response.body for item in driver.requests if
-                              item.url.startswith('https://www.marinetraffic.com/getData')]
-            boats = unpack_boats(requests_boats)
-        boats_to_retrieve = [item for item in CONFIG]
-        boats_to_remove = []
-        for item in boats_to_retrieve:
-            if not datafile.get(item):
-                datafile[item] = []
-                prevpoints = []
-            else:
-                prevpoints = datafile[item]
-            if prevpoints:
-                selected_boat, boats = get_data_from_prevpoint_with_boat_data(prevpoints[-1], item, boats, datafile)
-                if selected_boat:
-                    boats_to_remove.append(item)
-
-        boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
-        boats_to_remove = []
-        print(f'finished_general retrieval - missing {boats_to_retrieve}')
-        for item in boats_to_retrieve:
-            if not datafile.get(item):
-                datafile[item] = []
-                prevpoints = []
-            else:
-                prevpoints = datafile[item]
-            if prevpoints:
-                lastdata = prevpoints[-1]
-                a = get_data_from_prevpoint(driver, lastdata, item, datafile)
-                if a:
-                    boats_to_remove.append(item)
-
-        boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
-        print(f'finished retrieval based on last position - missing {boats_to_retrieve}')
-
-        for item in boats_to_retrieve:
-            del driver.requests
+            print(f'{item} --> Not found :( - Trying again')
             driver.get(CONFIG.get(item))
-            time.sleep(20)
+            driver.refresh()
+            time.sleep(25)
             requests_boats = [item.response.body for item in driver.requests if
                               item.url.startswith('https://www.marinetraffic.com/getData')]
             boats = unpack_boats(requests_boats)
-            if not boats:
-                print(f'{item} --> Not found :( - Trying again')
-                driver.get(CONFIG.get(item))
-                driver.refresh()
-                time.sleep(25)
-                requests_boats = [item.response.body for item in driver.requests if
-                                  item.url.startswith('https://www.marinetraffic.com/getData')]
-                boats = unpack_boats(requests_boats)
-            if not boats:
-                print(f'{item} --> Not found :( - Trying again - Definitive')
-            if len(boats) == 1:
-                handle_data(item, boats[0], datafile)
-            else:
-                print(f'{item} more than 1 value detected')
+        if not boats:
+            print(f'{item} --> Not found :( - Trying again - Definitive')
+        if len(boats) == 1:
+            handle_data(item, boats[0])
+            save_data(item, boats[0], datafile)
+        else:
+            print(f'{item} more than 1 value detected')
 
-        del driver.requests
-        driver.close()
-        print('----------------------')
-        print(f'starting run {datetime.datetime.now()}')
-        for item in datafile:
-            if datafile[item]:
-                handle_data(item, datafile[item][-1])
-        print('----------------------')
-        plot(datafile)
-        driver.quit()
-    except Exception as e:  # Hehe this is fine
-        print(e)
-        driver.close()
-        driver.quit()
+    del driver.requests
+    driver.close()
+    print('----------------------')
+    print(f'starting run {datetime.datetime.now()}')
+    for item in datafile:
+        if datafile[item]:
+            handle_data(item, datafile[item][-1])
+    print('----------------------')
+    plot(datafile)
+    driver.quit()
+    # except Exception as e:  # Hehe this is fine
+    #     print(e)
+    #     driver.close()
+    #     driver.quit()
 
 
 if __name__ == "__main__":
