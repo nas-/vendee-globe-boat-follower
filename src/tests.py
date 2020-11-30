@@ -89,6 +89,10 @@ class Test(TestCase):
 
     def test_unpack_boats(self):
         self.assertListEqual(utils.unpack_boats([b'{}']), [])
+        self.assertListEqual(utils.unpack_boats([b'test']), [])
+        self.assertListEqual(utils.unpack_boats([b'{"data":"AA"}']), [])
+        self.assertListEqual(utils.unpack_boats([b'[]']), [])
+        self.assertListEqual(utils.unpack_boats([b'']), [])
         self.assertListEqual(utils.unpack_boats([b'180731']), [])
         self.assertListEqual(utils.unpack_boats([
             b'{"type":1,"data":{"rows":[{"LAT":"-42.18295","LON":"9.222814","SPEED":"138","COURSE":"76",'

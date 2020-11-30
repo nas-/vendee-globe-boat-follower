@@ -49,13 +49,16 @@ def unpack_boats(boats_response: List) -> List[Dict]:
     """
     pleasures = []
     for boatdata in boats_response:
-        item_dict = json.loads(boatdata)
-        if type(item_dict) is not dict:
+        try:
+            item_dict = json.loads(boatdata)
+        except json.decoder.JSONDecodeError:
             continue
-        if len(item_dict) == 0:
+        if type(item_dict) is not dict:
             continue
         test = item_dict.get('data')
         if test is None:
+            continue
+        elif type(test) == str:
             continue
         else:
             rows = test.get('rows')
@@ -100,12 +103,12 @@ def save_data(boatname: str, boatdict: Dict, datafile: Dict = None) -> None:
     """
     if datafile:
         datafile[boatname].append(boatdict)
-        with open('data.json', 'w') as outfile:
+        with open('src/data.json', 'w') as outfile:
             json.dump(datafile, outfile)
 
 
 def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data: List[Dict], datafile: Dict) -> Union[
-                                            Tuple[None, List[dict]], Tuple[str, List[dict]]]:
+    Tuple[None, List[dict]], Tuple[str, List[dict]]]:
     """
     Function that take in the previous recorded point for the boat, the boat name, and all the data got from MT.
     It calculates where the boat should be now.
@@ -135,7 +138,7 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
         print(f'{item}: Should be {(lat, lon)},is {mostProbableBoat.get("LAT"), mostProbableBoat.get("LON")}'
               f' distance = {min(distances)}, too much, falling back. Out of map?')
         return None, boat_data
-    if mostProbableBoat.get('SPEED')=='0':
+    if mostProbableBoat.get('SPEED') == '0':
         print(f'{item}: Speed = 0, probably fake data')
         return None, boat_data
 
@@ -155,7 +158,7 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
 
 
 def get_data_from_prevpoint(d: webdriver, prevpoint: Dict, item: str, datafile: Dict) -> Union[
-                            Tuple[None, None], Tuple[str, List[dict]]]:
+    Tuple[None, None], Tuple[str, List[dict]]]:
     del d.requests
     timeElapsed = datetime.datetime.now() - datetime.datetime.fromtimestamp(int(prevpoint.get('ELAPSED')))
     miles_done = int(prevpoint.get('SPEED')) / 10 * timeElapsed.total_seconds() / 3600  # mm
