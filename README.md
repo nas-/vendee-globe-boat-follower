@@ -29,7 +29,13 @@ Delete `data.json`
 
 Enter marinetraffic links in `config.py` files
 
-Launch `main.py`
+Launch `main.py` [-r] [-d]
+
+The optional parameters:
+
+-r reads only the urls provided in config, without touching the data stored previously.
+
+-d enables debug logs.
 
 Script will keep running until stopped (1 run every 10 minutes).
 

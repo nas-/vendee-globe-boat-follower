@@ -2,9 +2,13 @@ import datetime
 import json
 import time
 from typing import Tuple, List, Dict, Union
+import logging
 
 from geopy import distance
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+
+logger = logging.getLogger('Main')
 
 
 class EarthFunctions:
@@ -84,13 +88,12 @@ def handle_data(boatname: str, boatdict: Dict) -> str:
     :param boatdict: Dictionary of boat data to print.
     :return:
     """
-    LAT = str(round(float(boatdict.get('LAT')), 4)).ljust(8, '0').rjust(9, ' ')
-    LON = str(round(float(boatdict.get('LON')), 4)).ljust(8, '0').rjust(9, ' ')
-    SPEED = str(int(boatdict.get('SPEED')) / 10).rjust(4, ' ')
-    HEADING = str(boatdict.get('HEADING')).rjust(3, ' ')
+    LAT = f"{round(float(boatdict.get('LAT')), 4):.4f}"
+    LON = f"{round(float(boatdict.get('LON')), 4):.4f}"
+    SPEED = f"{(int(boatdict.get('SPEED')) / 10):.1f}"
+    HEADING = f"{boatdict.get('HEADING')}"
     TIME = datetime.datetime.fromtimestamp(boatdict.get('ELAPSED'))
-    string = f"LAT: {LAT} LON: {LON}, SPEED: {SPEED}, HEADING: {HEADING}, TIME: {TIME}"
-    print(f"{boatname.ljust(12, '-')}->{string.rjust(80, ' ')}")
+    string = f"LAT: {LAT:>9} LON: {LON:>9}, SPEED: {SPEED:>4}, HEADING: {HEADING:>3}°, TIME: {TIME}"
     return f"{boatname.ljust(12, '-')}->{string.rjust(80, ' ')}"
 
 
@@ -130,24 +133,24 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
     distances = [EarthFunctions.calculate_distance((float(boat.get('LAT')), float(boat.get('LON'))), (lat, lon)) for
                  boat in boat_data]
     if not distances:
-        print(f'{item} - Distances is an empty sequence')
+        logger.warning(f'{item} - Distances is an empty sequence')
         return None, boat_data
     mostProbableBoat = boat_data[distances.index(min(distances))]
 
     if min(distances) > MINDISANCE:
-        print(f'{item}: Should be {(lat, lon)},is {mostProbableBoat.get("LAT"), mostProbableBoat.get("LON")}'
-              f' distance = {min(distances)}, too much, falling back. Out of map?')
+        logger.debug(f'{item}: Should be {(lat, lon)},is {mostProbableBoat.get("LAT"), mostProbableBoat.get("LON")}'
+                     f' distance = {min(distances)}, too much, falling back. Out of map?')
         return None, boat_data
     if mostProbableBoat.get('SPEED') == '0':
-        print(f'{item}: Speed = 0, probably fake data')
+        logger.debug(f'{item}: Speed = 0, probably fake data')
         return None, boat_data
 
     if mostProbableBoat.get('ELAPSED') - prevpoint.get('ELAPSED') < 100:
-        print(f'{item} No new positions')
+        logger.info(f'{item} No new positions')
         boat_data.remove(mostProbableBoat)
         return item, boat_data
     elif mostProbableBoat.get('LON') == prevpoint.get('LON') and mostProbableBoat.get('LAT') == prevpoint.get('LAT'):
-        print(f'{item} Position is the same as last recorded.')
+        logger.info(f'{item} Position is the same as last recorded.')
         boat_data.remove(mostProbableBoat)
         return item, boat_data
     else:
@@ -167,19 +170,32 @@ def get_data_from_prevpoint(d: webdriver, prevpoint: Dict, item: str, datafile: 
 
     url = f'https://www.marinetraffic.com/en/ais/home/centerx:{round(lon, 3)}/centery:{round(lat, 3)}/zoom:10'
     # TODO: Modify this.
-    d.get(url)
+    try:
+        d.get(url)
+    except TimeoutException:
+        logger.critical('Timeout eception. Cannot get data')
+        return None, None
     d.refresh()
     time.sleep(10)
-    req_boats = [item.response.body for item in d.requests if
-                 item.url.startswith('https://www.marinetraffic.com/getData')]
+    req_boats = req_boat(d.requests)
     _boats = unpack_boats(req_boats)
     if not _boats:
         time.sleep(10)
-        req_boats = [item.response.body for item in d.requests if
-                     item.url.startswith('https://www.marinetraffic.com/getData')]
+        req_boats = req_boat(d.requests)
         _boats = unpack_boats(req_boats)
     if not _boats:
-        print(f'{item} No positions. Cannot get data.')
+        logger.warning(f'{item} No positions. Cannot get data.')
         return None, None
     # TODO End Modify
     return get_data_from_prevpoint_with_boat_data(prevpoint, item, _boats, datafile)
+
+
+def req_boat(requests):
+    req_boats = []
+    for item in requests:
+        if item.url.startswith('https://www.marinetraffic.com/getData'):
+            try:
+                req_boats.append(item.response.body)
+            except AttributeError:
+                continue
+    return req_boats

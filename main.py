@@ -3,13 +3,15 @@ import json
 import os
 import threading
 import time
+import argparse
+import logging
 
 from seleniumwire import webdriver
+from selenium.common.exceptions import TimeoutException
 
 from config import CONFIG
 from src.plot import plot
-from src.utils import unpack_boats, handle_data, save_data, get_data_from_prevpoint, \
-    get_data_from_prevpoint_with_boat_data
+import src.utils
 from src.geojson_creator import create_geojson
 
 chrome_options = webdriver.ChromeOptions()
@@ -29,10 +31,28 @@ options = {
 }
 
 
-def mainloop():
+def mainloop(refresh=None, debug=None):
+    if debug:
+        logger = logging.getLogger('Main')
+        logger.setLevel(logging.DEBUG)
+        c_handler = logging.StreamHandler()
+        c_handler.setLevel(logging.DEBUG)
+        c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+        c_handler.setFormatter(c_format)
+        logger.addHandler(c_handler)
+        logger.debug('Setting level to debug')
+    else:
+        logger = logging.getLogger(__name__)
+        logger.setLevel(logging.INFO)
+        c_handler = logging.StreamHandler()
+        c_handler.setLevel(logging.INFO)
+        c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+        c_handler.setFormatter(c_format)
+        logger.addHandler(c_handler)
+        logger.info('Setting level to info')
     driver = webdriver.Chrome('chromedriver', options=chrome_options, seleniumwire_options=options)
     # try:
-
+    logger.debug(f"{refresh}")
     driver.maximize_window()
     driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
         "source": """
@@ -42,79 +62,90 @@ def mainloop():
     """
     })
 
-    print(f'starting run {datetime.datetime.now()}')
+    logger.info(f'starting run {datetime.datetime.now()}')
     if not os.path.isfile('src/data.json'):
         open('src/data.json', 'w+').write('{"BOSS":[]}')
 
     with open('src/data.json') as json_file:
         datafile = json.load(json_file)
-    # Higher zooms give better results. Lower zooms cover more maparea.
-    driver.get('https://www.marinetraffic.com/en/ais/home/centerx:6.7/centery:-38.3/zoom:6')
-    time.sleep(15)
-    requests_boats = [item.response.body for item in driver.requests if
-                      item.url.startswith('https://www.marinetraffic.com/getData')]
-    boats = unpack_boats(requests_boats)
-    if not boats:
-        driver.refresh()
-        time.sleep(15)
-        # TODO change with loop.AttributeError: 'NoneType' object has no attribute 'body'
-        requests_boats = [item.response.body for item in driver.requests if
-                          item.url.startswith('https://www.marinetraffic.com/getData')]
-        boats = unpack_boats(requests_boats)
     boats_to_retrieve = [item for item in CONFIG]
     boats_to_remove = []
-    for item in boats_to_retrieve:
-        if not datafile.get(item):
-            datafile[item] = []
-            prevpoints = []
-        else:
-            prevpoints = datafile[item]
-        if prevpoints:
-            selected_boat, boats = get_data_from_prevpoint_with_boat_data(prevpoints[-1], item, boats, datafile)
-            if selected_boat:
-                boats_to_remove.append(item)
 
-    boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
-    boats_to_remove = []
-    print(f'finished_general retrieval - missing {boats_to_retrieve}')
+    if not refresh:
+        # Higher zooms give better results. Lower zooms cover more maparea.
+        try:
+            driver.get('https://www.marinetraffic.com/en/ais/home/centerx:22.8/centery:-41.3/zoom:6')
+        except TimeoutException:
+            logger.critical(f'Timeout exception. Cannot get data')
+            return
+        time.sleep(15)
+        requests_boats = src.utils.req_boat(driver.requests)
+        boats = src.utils.unpack_boats(requests_boats)
+        if not boats:
+            driver.refresh()
+            time.sleep(15)
+            requests_boats = src.utils.req_boat(driver.requests)
+            boats = src.utils.unpack_boats(requests_boats)
 
-    for item in boats_to_retrieve:
-        if not datafile.get(item):
-            datafile[item] = []
-            prevpoints = []
-        else:
-            prevpoints = datafile[item]
-        if prevpoints:
-            lastdata = prevpoints[-1]
-            a, b = get_data_from_prevpoint(driver, lastdata, item, datafile)
-            if a:
-                boats_to_remove.append(item)
+        for item in boats_to_retrieve:
+            if not datafile.get(item):
+                datafile[item] = []
+                prevpoints = []
+            else:
+                prevpoints = datafile[item]
+            if prevpoints:
+                selected_boat, boats = src.utils.get_data_from_prevpoint_with_boat_data(prevpoints[-1], item, boats,
+                                                                                        datafile)
+                if selected_boat:
+                    boats_to_remove.append(item)
 
-    boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
-    print(f'finished retrieval based on last position - missing {boats_to_retrieve}')
+        boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
+        boats_to_remove = []
+        logger.info(f'finished_general retrieval - missing {boats_to_retrieve}')
+
+        for item in boats_to_retrieve:
+            if not datafile.get(item):
+                datafile[item] = []
+                prevpoints = []
+            else:
+                prevpoints = datafile[item]
+            if prevpoints:
+                lastdata = prevpoints[-1]
+                a, b = src.utils.get_data_from_prevpoint(driver, lastdata, item, datafile)
+                if a:
+                    boats_to_remove.append(item)
+
+        boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
+        logger.info(f'finished retrieval based on last position - missing {boats_to_retrieve}')
 
     for item in boats_to_retrieve:
         del driver.requests
-        driver.get(CONFIG.get(item))
-        time.sleep(20)
-        requests_boats = [item.response.body for item in driver.requests if
-                          item.url.startswith('https://www.marinetraffic.com/getData')]
-        boats = unpack_boats(requests_boats)
-        if not boats:
-            print(f'{item} --> Not found :( - Trying again')
+        try:
             driver.get(CONFIG.get(item))
+        except TimeoutException:
+            logger.critical(f'Timeout exception. Cannot get data')
+            return
+        time.sleep(20)
+        requests_boats = src.utils.req_boat(driver.requests)
+        boats = src.utils.unpack_boats(requests_boats)
+        if not boats:
+            logger.debug(f'{item} --> Not found :( - Trying again')
+            try:
+                driver.get(CONFIG.get(item))
+            except TimeoutException:
+                logger.critical(f'Timeout exception. Cannot get data')
+                return
             driver.refresh()
             time.sleep(25)
-            requests_boats = [item.response.body for item in driver.requests if
-                              item.url.startswith('https://www.marinetraffic.com/getData')]
-            boats = unpack_boats(requests_boats)
+            requests_boats = src.utils.req_boat(driver.requests)
+            boats = src.utils.unpack_boats(requests_boats)
         if not boats:
-            print(f'{item} --> Not found :( - Trying again - Definitive')
+            logger.debug(f'{item} --> Not found :( - Trying again - Definitive')
         if len(boats) == 1:
-            handle_data(item, boats[0])
-            save_data(item, boats[0], datafile)
+            print(src.utils.handle_data(item, boats[0]))
+            src.utils.save_data(item, boats[0], datafile)
         else:
-            print(f'{item} more than 1 value detected')
+            logger.info(f'{item} more than 1 value detected')
 
     del driver.requests
     driver.close()
@@ -122,7 +153,7 @@ def mainloop():
     print(f'starting run {datetime.datetime.now()}')
     for item in datafile:
         if datafile[item]:
-            handle_data(item, datafile[item][-1])
+            print(src.utils.handle_data(item, datafile[item][-1]))
     print('----------------------')
     plot(datafile)
     create_geojson(datafile)
@@ -135,7 +166,14 @@ def mainloop():
 
 if __name__ == "__main__":
     WAIT_TIME_SECONDS = 900
-    mainloop()
+
+    parser = argparse.ArgumentParser(description='Starts the process.')
+    parser.add_argument('-r', '--refresh', action='store_true', help="Uses only the position specified in config")
+    parser.add_argument('-d', '--debug', action='store_true', help="Debug purposes")
+    args = parser.parse_args()
+    args2 = {'refresh': args.refresh, 'debug': args.debug}
+
+    mainloop(**args2)
     ticker = threading.Event()
     while not ticker.wait(WAIT_TIME_SECONDS):
         mainloop()

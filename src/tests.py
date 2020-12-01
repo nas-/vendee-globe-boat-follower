@@ -119,9 +119,23 @@ class Test(TestCase):
 
     def test_handle_data(self):
         self.assertEqual(utils.handle_data('TEST',
-                                           {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '133', 'COURSE': '110',
-                                            'HEADING': '110', 'ELAPSED': 1606658751,
+                                           {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '0', 'COURSE': '0',
+                                            'HEADING': '0', 'ELAPSED': 1606658751,
                                             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9',
                                             'TYPE_NAME': 'Pleasure Craft',
                                             'STATUS_NAME': 'Unknown'}),
-                         'TEST--------->LAT:  -41.1235 LON:  -5.11850, SPEED: 13.3, HEADING: 110, TIME: 2020-11-29 15:05:51')
+                         'TEST--------->LAT:  -41.1235 LON:   -5.1185, SPEED:  0.0, HEADING:   0°, TIME: 2020-11-29 15:05:51')
+        self.assertEqual(utils.handle_data('TEST',
+                                           {'LAT': '179.12354', 'LON': '5.118488', 'SPEED': '133', 'COURSE': '90',
+                                            'HEADING': '90', 'ELAPSED': 1606658751,
+                                            'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9',
+                                            'TYPE_NAME': 'Pleasure Craft',
+                                            'STATUS_NAME': 'Unknown'}),
+                         'TEST--------->LAT:  179.1235 LON:    5.1185, SPEED: 13.3, HEADING:  90°, TIME: 2020-11-29 15:05:51')
+        self.assertEqual(utils.handle_data('TEST',
+                                           {'LAT': '-41.1', 'LON': '5', 'SPEED': '133', 'COURSE': '259',
+                                            'HEADING': '259', 'ELAPSED': 1606658751,
+                                            'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9',
+                                            'TYPE_NAME': 'Pleasure Craft',
+                                            'STATUS_NAME': 'Unknown'}),
+                         'TEST--------->LAT:  -41.1000 LON:    5.0000, SPEED: 13.3, HEADING: 259°, TIME: 2020-11-29 15:05:51')
