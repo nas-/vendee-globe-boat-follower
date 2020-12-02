@@ -70,7 +70,11 @@ def unpack_boats(boats_response: List) -> List[Dict]:
             ship_kind = row.get('TYPE_NAME')
             if ship_kind == 'Pleasure Craft':
                 pleasures.append(row)
-    pleasures_no_shipID = [{k: v for k, v in d.items() if k != 'SHIP_ID'} for d in pleasures]
+    pleasures_no_shipID = []
+    for d in pleasures:
+        pleasures_no_shipID.append({k: v for k, v in d.items() if
+                                    k not in ['SHIP_ID', 'STATUS_NAME', 'TYPE_IMG', 'SHIPNAME', 'SHIPTYPE',
+                                              'TYPE_NAME', 'INVALID_DIMENSIONS']})
     pleasuresDeduplicates = [dict(t) for t in {tuple(d.items()) for d in pleasures_no_shipID}]
     for boatdata in pleasuresDeduplicates:
         tm = datetime.datetime.now()
@@ -107,7 +111,7 @@ def save_data(boatname: str, boatdict: Dict, datafile: Dict = None) -> None:
     if datafile:
         datafile[boatname].append(boatdict)
         with open('src/data.json', 'w') as outfile:
-            json.dump(datafile, outfile)
+            json.dump(datafile, outfile, indent=2)
 
 
 def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data: List[Dict], datafile: Dict) -> Union[
@@ -162,9 +166,17 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
 
 def get_data_from_prevpoint(d: webdriver, prevpoint: Dict, item: str, datafile: Dict) -> Union[
     Tuple[None, None], Tuple[str, List[dict]]]:
+    """
+
+    :param d: webdriver
+    :param prevpoint: Dictionary containg data from previous point.
+    :param item:  Boat name
+    :param datafile: all the data from the file as dict
+    :return: Tuple Boatname-boatdata
+    """
     del d.requests
     timeElapsed = datetime.datetime.now() - datetime.datetime.fromtimestamp(int(prevpoint.get('ELAPSED')))
-    miles_done = int(prevpoint.get('SPEED')) / 10 * timeElapsed.total_seconds() / 3600  # mm
+    miles_done = int(prevpoint.get('SPEED')) / 10 * timeElapsed.total_seconds() / 3600  # nm
     lon, lat = EarthFunctions.gcd((float(prevpoint.get('LON')), float(prevpoint.get('LAT'))),
                                   int(prevpoint.get('COURSE')), miles_done)
 
@@ -190,7 +202,12 @@ def get_data_from_prevpoint(d: webdriver, prevpoint: Dict, item: str, datafile: 
     return get_data_from_prevpoint_with_boat_data(prevpoint, item, _boats, datafile)
 
 
-def req_boat(requests):
+def req_boat(requests) -> List:
+    """
+    Filter requests for those coming from get data endpoint.
+
+    :type requests: LazyRequest
+    """
     req_boats = []
     for item in requests:
         if item.url.startswith('https://www.marinetraffic.com/getData'):

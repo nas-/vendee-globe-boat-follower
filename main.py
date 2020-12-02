@@ -32,6 +32,12 @@ options = {
 
 
 def mainloop(refresh=None, debug=None):
+    """
+
+    :param refresh: If true, use only links in config.py.
+    :param debug:   Set loglevel to debug
+    :return: None
+    """
     if debug:
         logger = logging.getLogger('Main')
         logger.setLevel(logging.DEBUG)
@@ -143,7 +149,12 @@ def mainloop(refresh=None, debug=None):
             logger.debug(f'{item} --> Not found :( - Trying again - Definitive')
         if len(boats) == 1:
             print(src.utils.handle_data(item, boats[0]))
-            src.utils.save_data(item, boats[0], datafile)
+            try:
+                if boats[0] == datafile.get(item)[-1]:
+                    logger.info(f'{item} Position is the same as last recorded.')
+                    continue
+            except IndexError:
+                src.utils.save_data(item, boats[0], datafile)
         else:
             logger.info(f'{item} more than 1 value detected')
 

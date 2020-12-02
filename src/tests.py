@@ -53,21 +53,11 @@ request = b'{"type":1,"data":{"rows":[{"LAT":"-42.8567","LON":"-29.80231","SPEED
           b'"COURSE":"110","HEADING":"110","ELAPSED":"264","SHIPNAME":"[SAT-AIS]","SHIPTYPE":"9",' \
           b'"SHIP_ID":"Tmpjek56YzNOamN6TnpjM05qY3pOdz09LXBjdmdFcERFNjdWaUdqSDIvV3BORnc9PQ==","TYPE_IMG":"9",' \
           b'"TYPE_NAME":"Pleasure Craft","STATUS_NAME":"Unknown"}],"areaShips":17}} '
-response = [{'LAT': '-39.67762', 'LON': '-9.14808', 'SPEED': '240', 'COURSE': '94', 'HEADING': '94', 'ELAPSED': 17,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            {'LAT': '-39.92724', 'LON': '-6.348073', 'SPEED': '196', 'COURSE': '112', 'HEADING': '112', 'ELAPSED': 124,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            {'LAT': '-39.95451', 'LON': '-7.403518', 'SPEED': '152', 'COURSE': '91', 'HEADING': '91', 'ELAPSED': 111,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            {'LAT': '-40.81548', 'LON': '-7.297678', 'SPEED': '143', 'COURSE': '96', 'HEADING': '96', 'ELAPSED': 15,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '133', 'COURSE': '110', 'HEADING': '110', 'ELAPSED': 264,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
+response = [{'LAT': '-39.67762', 'LON': '-9.14808', 'SPEED': '240', 'COURSE': '94', 'HEADING': '94', 'ELAPSED': 17},
+            {'LAT': '-39.92724', 'LON': '-6.348073', 'SPEED': '196', 'COURSE': '112', 'HEADING': '112', 'ELAPSED': 124},
+            {'LAT': '-39.95451', 'LON': '-7.403518', 'SPEED': '152', 'COURSE': '91', 'HEADING': '91', 'ELAPSED': 111},
+            {'LAT': '-40.81548', 'LON': '-7.297678', 'SPEED': '143', 'COURSE': '96', 'HEADING': '96', 'ELAPSED': 15},
+            {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '133', 'COURSE': '110', 'HEADING': '110', 'ELAPSED': 264},
             ]
 
 for boatdata in response:

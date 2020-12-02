@@ -6,12 +6,7 @@
       "SPEED": "94",
       "COURSE": "94",
       "HEADING": "94",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606662600.0
     },
     {
       "LAT": "-38.19543",
@@ -19,12 +14,7 @@
       "SPEED": "135",
       "COURSE": "88",
       "HEADING": "88",
-      "ELAPSED": 1606662780.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606662780.0
     },
     {
       "LAT": "-38.19552",
@@ -32,12 +22,7 @@
       "SPEED": "94",
       "COURSE": "94",
       "HEADING": "94",
-      "ELAPSED": 1606662660.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606662660.0
     },
     {
       "LAT": "-38.12628",
@@ -45,12 +30,7 @@
       "SPEED": "265",
       "COURSE": "58",
       "HEADING": "58",
-      "ELAPSED": 1606664460.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606664460.0
     },
     {
       "LAT": "-38.12628",
@@ -58,12 +38,7 @@
       "SPEED": "265",
       "COURSE": "58",
       "HEADING": "58",
-      "ELAPSED": 1606664460.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606664460.0
     },
     {
       "LAT": "-38.19543",
@@ -71,12 +46,7 @@
       "SPEED": "135",
       "COURSE": "88",
       "HEADING": "88",
-      "ELAPSED": 1606664940.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606664940.0
     },
     {
       "LAT": "-38.19518",
@@ -84,12 +54,7 @@
       "SPEED": "78",
       "COURSE": "89",
       "HEADING": "89",
-      "ELAPSED": 1606665060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606665060.0
     },
     {
       "LAT": "-38.19543",
@@ -97,12 +62,7 @@
       "SPEED": "135",
       "COURSE": "88",
       "HEADING": "88",
-      "ELAPSED": 1606667220.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606667220.0
     },
     {
       "LAT": "-38.01376",
@@ -110,12 +70,7 @@
       "SPEED": "157",
       "COURSE": "60",
       "HEADING": "60",
-      "ELAPSED": 1606667580.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606667580.0
     },
     {
       "LAT": "-37.95635",
@@ -123,12 +78,7 @@
       "SPEED": "191",
       "COURSE": "56",
       "HEADING": "56",
-      "ELAPSED": 1606669140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606669140.0
     },
     {
       "LAT": "-37.89702",
@@ -136,12 +86,7 @@
       "SPEED": "111",
       "COURSE": "60",
       "HEADING": "60",
-      "ELAPSED": 1606670280.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606670280.0
     },
     {
       "LAT": "-37.84461",
@@ -149,12 +94,7 @@
       "SPEED": "136",
       "COURSE": "65",
       "HEADING": "65",
-      "ELAPSED": 1606671480.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606671480.0
     },
     {
       "LAT": "-37.7978",
@@ -162,12 +102,7 @@
       "SPEED": "202",
       "COURSE": "52",
       "HEADING": "52",
-      "ELAPSED": 1606672620.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606672620.0
     },
     {
       "LAT": "-37.76229",
@@ -175,12 +110,7 @@
       "SPEED": "179",
       "COURSE": "58",
       "HEADING": "58",
-      "ELAPSED": 1606673640.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606673640.0
     },
     {
       "LAT": "-37.65413",
@@ -188,12 +118,7 @@
       "SPEED": "209",
       "COURSE": "53",
       "HEADING": "53",
-      "ELAPSED": 1606675560.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606675560.0
     },
     {
       "LAT": "-37.7108",
@@ -201,12 +126,7 @@
       "SPEED": "96",
       "COURSE": "121",
       "HEADING": "121",
-      "ELAPSED": 1606677900.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606677900.0
     },
     {
       "LAT": "-37.71815",
@@ -214,12 +134,7 @@
       "SPEED": "100",
       "COURSE": "73",
       "HEADING": "73",
-      "ELAPSED": 1606678980.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606678980.0
     },
     {
       "LAT": "-37.68153",
@@ -227,12 +142,7 @@
       "SPEED": "213",
       "COURSE": "67",
       "HEADING": "67",
-      "ELAPSED": 1606679700.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606679700.0
     },
     {
       "LAT": "-37.49857",
@@ -240,12 +150,7 @@
       "SPEED": "220",
       "COURSE": "55",
       "HEADING": "55",
-      "ELAPSED": 1606683360.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606683360.0
     },
     {
       "LAT": "-37.48291",
@@ -253,12 +158,7 @@
       "SPEED": "184",
       "COURSE": "55",
       "HEADING": "55",
-      "ELAPSED": 1606684320.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606684320.0
     },
     {
       "LAT": "-37.44355",
@@ -266,12 +166,7 @@
       "SPEED": "184",
       "COURSE": "49",
       "HEADING": "49",
-      "ELAPSED": 1606684560.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606684560.0
     },
     {
       "LAT": "-37.3546",
@@ -279,12 +174,7 @@
       "SPEED": "183",
       "COURSE": "45",
       "HEADING": "45",
-      "ELAPSED": 1606686000.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606686000.0
     },
     {
       "LAT": "-37.33971",
@@ -292,12 +182,7 @@
       "SPEED": "104",
       "COURSE": "112",
       "HEADING": "112",
-      "ELAPSED": 1606686780.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606686780.0
     },
     {
       "LAT": "-37.34631",
@@ -305,12 +190,7 @@
       "SPEED": "151",
       "COURSE": "112",
       "HEADING": "112",
-      "ELAPSED": 1606687380.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606687380.0
     },
     {
       "LAT": "-39.90619",
@@ -318,12 +198,7 @@
       "SPEED": "173",
       "COURSE": "136",
       "HEADING": "136",
-      "ELAPSED": 1606739640.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606739640.0
     },
     {
       "LAT": "-39.93328",
@@ -331,12 +206,7 @@
       "SPEED": "153",
       "COURSE": "156",
       "HEADING": "156",
-      "ELAPSED": 1606740180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606740180.0
     },
     {
       "LAT": "-40.00161",
@@ -344,12 +214,7 @@
       "SPEED": "180",
       "COURSE": "144",
       "HEADING": "144",
-      "ELAPSED": 1606741500.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606741500.0
     },
     {
       "LAT": "-40.07888",
@@ -357,12 +222,7 @@
       "SPEED": "216",
       "COURSE": "138",
       "HEADING": "138",
-      "ELAPSED": 1606743000.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606743000.0
     },
     {
       "LAT": "-40.2365",
@@ -370,12 +230,7 @@
       "SPEED": "221",
       "COURSE": "137",
       "HEADING": "137",
-      "ELAPSED": 1606745340.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606745340.0
     },
     {
       "LAT": "-40.27528",
@@ -383,12 +238,7 @@
       "SPEED": "176",
       "COURSE": "138",
       "HEADING": "138",
-      "ELAPSED": 1606746180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606746180.0
     },
     {
       "LAT": "-40.5203",
@@ -396,12 +246,7 @@
       "SPEED": "202",
       "COURSE": "127",
       "HEADING": "127",
-      "ELAPSED": 1606750980.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606750980.0
     },
     {
       "LAT": "-40.56236",
@@ -409,12 +254,7 @@
       "SPEED": "204",
       "COURSE": "136",
       "HEADING": "136",
-      "ELAPSED": 1606752060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606752060.0
     },
     {
       "LAT": "-40.57943",
@@ -422,12 +262,7 @@
       "SPEED": "154",
       "COURSE": "118",
       "HEADING": "118",
-      "ELAPSED": 1606752420.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606752420.0
     },
     {
       "LAT": "-40.64473",
@@ -435,12 +270,7 @@
       "SPEED": "123",
       "COURSE": "123",
       "HEADING": "123",
-      "ELAPSED": 1606754160.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606754160.0
     },
     {
       "LAT": "-40.67426",
@@ -448,12 +278,7 @@
       "SPEED": "85",
       "COURSE": "123",
       "HEADING": "123",
-      "ELAPSED": 1606754760.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606754760.0
     },
     {
       "LAT": "-40.72363",
@@ -461,12 +286,7 @@
       "SPEED": "130",
       "COURSE": "134",
       "HEADING": "134",
-      "ELAPSED": 1606755780.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606755780.0
     },
     {
       "LAT": "-41.78672",
@@ -474,12 +294,7 @@
       "SPEED": "133",
       "COURSE": "58",
       "HEADING": "58",
-      "ELAPSED": 1606845060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606845060.0
     },
     {
       "LAT": "-41.77791",
@@ -487,12 +302,7 @@
       "SPEED": "160",
       "COURSE": "74",
       "HEADING": "74",
-      "ELAPSED": 1606845780.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606845780.0
     },
     {
       "LAT": "-41.75676",
@@ -500,12 +310,7 @@
       "SPEED": "182",
       "COURSE": "64",
       "HEADING": "64",
-      "ELAPSED": 1606846980.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606846980.0
     },
     {
       "LAT": "-41.74979",
@@ -513,12 +318,7 @@
       "SPEED": "200",
       "COURSE": "77",
       "HEADING": "77",
-      "ELAPSED": 1606847700.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606847700.0
     },
     {
       "LAT": "-41.66091",
@@ -526,12 +326,7 @@
       "SPEED": "264",
       "COURSE": "75",
       "HEADING": "75",
-      "ELAPSED": 1606850580.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606850580.0
     },
     {
       "LAT": "-41.63003",
@@ -539,12 +334,7 @@
       "SPEED": "100",
       "COURSE": "61",
       "HEADING": "61",
-      "ELAPSED": 1606851540.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606851540.0
     },
     {
       "LAT": "-41.60546",
@@ -552,12 +342,7 @@
       "SPEED": "116",
       "COURSE": "75",
       "HEADING": "75",
-      "ELAPSED": 1606852620.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606852620.0
     },
     {
       "LAT": "-41.58617",
@@ -565,12 +350,7 @@
       "SPEED": "197",
       "COURSE": "88",
       "HEADING": "88",
-      "ELAPSED": 1606853340.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606853340.0
     },
     {
       "LAT": "-41.58234",
@@ -578,12 +358,7 @@
       "SPEED": "173",
       "COURSE": "75",
       "HEADING": "75",
-      "ELAPSED": 1606854180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606854180.0
     },
     {
       "LAT": "-41.57674",
@@ -591,12 +366,7 @@
       "SPEED": "148",
       "COURSE": "82",
       "HEADING": "82",
-      "ELAPSED": 1606854960.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606854960.0
     },
     {
       "LAT": "-41.56011",
@@ -604,12 +374,7 @@
       "SPEED": "185",
       "COURSE": "91",
       "HEADING": "91",
-      "ELAPSED": 1606856340.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856340.0
     },
     {
       "LAT": "-41.54433",
@@ -617,12 +382,7 @@
       "SPEED": "208",
       "COURSE": "77",
       "HEADING": "77",
-      "ELAPSED": 1606856880.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856880.0
     },
     {
       "LAT": "-41.50868",
@@ -630,12 +390,7 @@
       "SPEED": "206",
       "COURSE": "74",
       "HEADING": "74",
-      "ELAPSED": 1606858320.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858320.0
     },
     {
       "LAT": "-41.49622",
@@ -643,12 +398,63 @@
       "SPEED": "144",
       "COURSE": "73",
       "HEADING": "73",
-      "ELAPSED": 1606858980.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858980.0
+    },
+    {
+      "LAT": "-40.89154",
+      "LON": "33.43579",
+      "SPEED": "160",
+      "COURSE": "46",
+      "HEADING": "46",
+      "ELAPSED": 1606934340.0
+    },
+    {
+      "LAT": "-40.80355",
+      "LON": "33.56529",
+      "SPEED": "205",
+      "COURSE": "50",
+      "HEADING": "50",
+      "ELAPSED": 1606936920.0
+    },
+    {
+      "LAT": "-40.75153",
+      "LON": "33.65781",
+      "SPEED": "130",
+      "COURSE": "58",
+      "HEADING": "58",
+      "ELAPSED": 1606937640.0
+    },
+    {
+      "LAT": "-40.65762",
+      "LON": "33.85168",
+      "SPEED": "217",
+      "COURSE": "60",
+      "HEADING": "60",
+      "ELAPSED": 1606939140.0
+    },
+    {
+      "LAT": "-40.62814",
+      "LON": "33.92188",
+      "SPEED": "119",
+      "COURSE": "66",
+      "HEADING": "66",
+      "ELAPSED": 1606940040.0
+    },
+    {
+      "LAT": "-40.60419",
+      "LON": "33.9853",
+      "SPEED": "198",
+      "COURSE": "65",
+      "HEADING": "65",
+      "ELAPSED": 1606940700.0
+    },
+    {
+      "LAT": "-40.57055",
+      "LON": "34.0732",
+      "SPEED": "225",
+      "COURSE": "66",
+      "HEADING": "66",
+      "ELAPSED": 1606941180.0
     }
   ],
   "LINKED": [
@@ -658,12 +464,7 @@
       "SPEED": "195",
       "COURSE": "127",
       "HEADING": "127",
-      "ELAPSED": 1606662840.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606662840.0
     },
     {
       "LAT": "-38.78092",
@@ -671,12 +472,7 @@
       "SPEED": "243",
       "COURSE": "116",
       "HEADING": "116",
-      "ELAPSED": 1606665060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606665060.0
     },
     {
       "LAT": "-38.83945",
@@ -684,12 +480,7 @@
       "SPEED": "189",
       "COURSE": "126",
       "HEADING": "126",
-      "ELAPSED": 1606666680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606666680.0
     },
     {
       "LAT": "-38.83961",
@@ -697,12 +488,7 @@
       "SPEED": "0",
       "COURSE": "0",
       "HEADING": "0",
-      "ELAPSED": 1606667220.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606667220.0
     },
     {
       "LAT": "-38.99836",
@@ -710,12 +496,7 @@
       "SPEED": "158",
       "COURSE": "104",
       "HEADING": "104",
-      "ELAPSED": 1606670220.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606670220.0
     },
     {
       "LAT": "-39.07074",
@@ -723,12 +504,7 @@
       "SPEED": "130",
       "COURSE": "113",
       "HEADING": "113",
-      "ELAPSED": 1606673400.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606673400.0
     },
     {
       "LAT": "-39.14013",
@@ -736,12 +512,7 @@
       "SPEED": "169",
       "COURSE": "115",
       "HEADING": "115",
-      "ELAPSED": 1606674900.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606674900.0
     },
     {
       "LAT": "-39.20052",
@@ -749,12 +520,7 @@
       "SPEED": "212",
       "COURSE": "106",
       "HEADING": "106",
-      "ELAPSED": 1606677120.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606677120.0
     },
     {
       "LAT": "-39.36043",
@@ -762,12 +528,7 @@
       "SPEED": "193",
       "COURSE": "107",
       "HEADING": "107",
-      "ELAPSED": 1606682700.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606682700.0
     },
     {
       "LAT": "-39.40393",
@@ -775,12 +536,7 @@
       "SPEED": "165",
       "COURSE": "125",
       "HEADING": "125",
-      "ELAPSED": 1606684620.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606684620.0
     },
     {
       "LAT": "-39.44047",
@@ -788,12 +544,7 @@
       "SPEED": "221",
       "COURSE": "111",
       "HEADING": "111",
-      "ELAPSED": 1606686180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606686180.0
     },
     {
       "LAT": "-39.45655",
@@ -801,12 +552,7 @@
       "SPEED": "165",
       "COURSE": "118",
       "HEADING": "118",
-      "ELAPSED": 1606686900.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606686900.0
     },
     {
       "LAT": "-39.47015",
@@ -814,12 +560,7 @@
       "SPEED": "203",
       "COURSE": "102",
       "HEADING": "102",
-      "ELAPSED": 1606687920.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606687920.0
     },
     {
       "LAT": "-40.75166",
@@ -827,13 +568,7 @@
       "SPEED": "154",
       "COURSE": "91",
       "HEADING": "91",
-      "ELAPSED": 1606738680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown",
-      "INVALID_DIMENSIONS": "0"
+      "ELAPSED": 1606738680.0
     },
     {
       "LAT": "-40.80202",
@@ -841,12 +576,7 @@
       "SPEED": "209",
       "COURSE": "108",
       "HEADING": "108",
-      "ELAPSED": 1606741140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606741140.0
     },
     {
       "LAT": "-40.82817",
@@ -854,12 +584,7 @@
       "SPEED": "207",
       "COURSE": "122",
       "HEADING": "122",
-      "ELAPSED": 1606742040.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606742040.0
     },
     {
       "LAT": "-40.88415",
@@ -867,12 +592,7 @@
       "SPEED": "179",
       "COURSE": "118",
       "HEADING": "118",
-      "ELAPSED": 1606744740.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606744740.0
     },
     {
       "LAT": "-41.00348",
@@ -880,12 +600,7 @@
       "SPEED": "114",
       "COURSE": "85",
       "HEADING": "85",
-      "ELAPSED": 1606751280.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606751280.0
     },
     {
       "LAT": "-41.00755",
@@ -893,12 +608,7 @@
       "SPEED": "233",
       "COURSE": "109",
       "HEADING": "109",
-      "ELAPSED": 1606752180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606752180.0
     },
     {
       "LAT": "-41.03466",
@@ -906,12 +616,7 @@
       "SPEED": "175",
       "COURSE": "101",
       "HEADING": "101",
-      "ELAPSED": 1606753440.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606753440.0
     },
     {
       "LAT": "-41.04559",
@@ -919,12 +624,7 @@
       "SPEED": "201",
       "COURSE": "98",
       "HEADING": "98",
-      "ELAPSED": 1606753980.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606753980.0
     },
     {
       "LAT": "-41.05342",
@@ -932,12 +632,7 @@
       "SPEED": "176",
       "COURSE": "96",
       "HEADING": "96",
-      "ELAPSED": 1606754820.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606754820.0
     },
     {
       "LAT": "-41.0776",
@@ -945,12 +640,7 @@
       "SPEED": "188",
       "COURSE": "107",
       "HEADING": "107",
-      "ELAPSED": 1606755780.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606755780.0
     },
     {
       "LAT": "-40.51687",
@@ -958,12 +648,7 @@
       "SPEED": "154",
       "COURSE": "73",
       "HEADING": "73",
-      "ELAPSED": 1606845600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606845600.0
     },
     {
       "LAT": "-40.50781",
@@ -971,12 +656,7 @@
       "SPEED": "141",
       "COURSE": "90",
       "HEADING": "90",
-      "ELAPSED": 1606846500.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606846500.0
     },
     {
       "LAT": "-40.5004",
@@ -984,12 +664,7 @@
       "SPEED": "151",
       "COURSE": "78",
       "HEADING": "78",
-      "ELAPSED": 1606847460.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606847460.0
     },
     {
       "LAT": "-40.44327",
@@ -997,12 +672,7 @@
       "SPEED": "160",
       "COURSE": "79",
       "HEADING": "79",
-      "ELAPSED": 1606850580.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606850580.0
     },
     {
       "LAT": "-40.44186",
@@ -1010,12 +680,7 @@
       "SPEED": "167",
       "COURSE": "81",
       "HEADING": "81",
-      "ELAPSED": 1606850820.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606850820.0
     },
     {
       "LAT": "-40.41901",
@@ -1023,12 +688,7 @@
       "SPEED": "206",
       "COURSE": "71",
       "HEADING": "71",
-      "ELAPSED": 1606852020.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606852020.0
     },
     {
       "LAT": "-40.40749",
@@ -1036,12 +696,7 @@
       "SPEED": "153",
       "COURSE": "88",
       "HEADING": "88",
-      "ELAPSED": 1606853040.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606853040.0
     },
     {
       "LAT": "-40.41049",
@@ -1049,12 +704,7 @@
       "SPEED": "157",
       "COURSE": "97",
       "HEADING": "97",
-      "ELAPSED": 1606854420.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606854420.0
     },
     {
       "LAT": "-40.40952",
@@ -1062,12 +712,7 @@
       "SPEED": "141",
       "COURSE": "80",
       "HEADING": "80",
-      "ELAPSED": 1606855440.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606855440.0
     },
     {
       "LAT": "-40.40756",
@@ -1075,12 +720,7 @@
       "SPEED": "141",
       "COURSE": "85",
       "HEADING": "85",
-      "ELAPSED": 1606856100.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856100.0
     },
     {
       "LAT": "-40.4056",
@@ -1088,12 +728,7 @@
       "SPEED": "199",
       "COURSE": "98",
       "HEADING": "98",
-      "ELAPSED": 1606857120.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606857120.0
     },
     {
       "LAT": "-40.38215",
@@ -1101,12 +736,7 @@
       "SPEED": "200",
       "COURSE": "68",
       "HEADING": "68",
-      "ELAPSED": 1606858680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858680.0
     },
     {
       "LAT": "-40.37526",
@@ -1114,12 +744,55 @@
       "SPEED": "200",
       "COURSE": "80",
       "HEADING": "80",
-      "ELAPSED": 1606858800.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858800.0
+    },
+    {
+      "LAT": "-39.48246",
+      "LON": "28.00253",
+      "SPEED": "184",
+      "COURSE": "43",
+      "HEADING": "43",
+      "ELAPSED": 1606934340.0
+    },
+    {
+      "LAT": "-39.43446",
+      "LON": "28.06174",
+      "SPEED": "220",
+      "COURSE": "36",
+      "HEADING": "36",
+      "ELAPSED": 1606935240.0
+    },
+    {
+      "LAT": "-39.31006",
+      "LON": "28.21201",
+      "SPEED": "213",
+      "COURSE": "38",
+      "HEADING": "38",
+      "ELAPSED": 1606938000.0
+    },
+    {
+      "LAT": "-39.22204",
+      "LON": "28.3229",
+      "SPEED": "183",
+      "COURSE": "46",
+      "HEADING": "46",
+      "ELAPSED": 1606938780.0
+    },
+    {
+      "LAT": "-39.15005",
+      "LON": "28.41829",
+      "SPEED": "135",
+      "COURSE": "54",
+      "HEADING": "54",
+      "ELAPSED": 1606940340.0
+    },
+    {
+      "LAT": "-39.08359",
+      "LON": "28.50073",
+      "SPEED": "143",
+      "COURSE": "41",
+      "HEADING": "41",
+      "ELAPSED": 1606941240.0
     }
   ],
   "BOSS": [
@@ -1129,25 +802,7 @@
       "SPEED": "136",
       "COURSE": "134",
       "HEADING": "134",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-39.16788",
-      "LON": "-9.120896",
-      "SPEED": "136",
-      "COURSE": "134",
-      "HEADING": "134",
-      "ELAPSED": 1606662540.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606662600.0
     },
     {
       "LAT": "-39.19412",
@@ -1155,12 +810,7 @@
       "SPEED": "142",
       "COURSE": "96",
       "HEADING": "96",
-      "ELAPSED": 1606665060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606665060.0
     },
     {
       "LAT": "-39.1984",
@@ -1168,12 +818,7 @@
       "SPEED": "224",
       "COURSE": "98",
       "HEADING": "98",
-      "ELAPSED": 1606665240.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606665240.0
     },
     {
       "LAT": "-39.19412",
@@ -1181,12 +826,7 @@
       "SPEED": "142",
       "COURSE": "96",
       "HEADING": "96",
-      "ELAPSED": 1606665360.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606665360.0
     },
     {
       "LAT": "-39.20085",
@@ -1194,12 +834,7 @@
       "SPEED": "207",
       "COURSE": "87",
       "HEADING": "87",
-      "ELAPSED": 1606666800.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606666800.0
     },
     {
       "LAT": "-39.20421",
@@ -1207,12 +842,7 @@
       "SPEED": "179",
       "COURSE": "90",
       "HEADING": "90",
-      "ELAPSED": 1606667220.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606667220.0
     },
     {
       "LAT": "-39.20187",
@@ -1220,12 +850,7 @@
       "SPEED": "235",
       "COURSE": "84",
       "HEADING": "84",
-      "ELAPSED": 1606668000.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606668000.0
     },
     {
       "LAT": "-39.19679",
@@ -1233,12 +858,7 @@
       "SPEED": "154",
       "COURSE": "78",
       "HEADING": "78",
-      "ELAPSED": 1606669020.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606669020.0
     },
     {
       "LAT": "-39.19568",
@@ -1246,12 +866,7 @@
       "SPEED": "158",
       "COURSE": "83",
       "HEADING": "83",
-      "ELAPSED": 1606669380.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606669380.0
     },
     {
       "LAT": "-39.19346",
@@ -1259,12 +874,7 @@
       "SPEED": "121",
       "COURSE": "92",
       "HEADING": "92",
-      "ELAPSED": 1606671240.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606671240.0
     },
     {
       "LAT": "-39.19261",
@@ -1272,12 +882,7 @@
       "SPEED": "169",
       "COURSE": "94",
       "HEADING": "94",
-      "ELAPSED": 1606673040.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606673040.0
     },
     {
       "LAT": "-39.19243",
@@ -1285,12 +890,7 @@
       "SPEED": "124",
       "COURSE": "93",
       "HEADING": "93",
-      "ELAPSED": 1606673160.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606673160.0
     },
     {
       "LAT": "-39.18913",
@@ -1298,12 +898,7 @@
       "SPEED": "161",
       "COURSE": "93",
       "HEADING": "93",
-      "ELAPSED": 1606675680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606675680.0
     },
     {
       "LAT": "-39.18881",
@@ -1311,12 +906,7 @@
       "SPEED": "208",
       "COURSE": "94",
       "HEADING": "94",
-      "ELAPSED": 1606677300.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606677300.0
     },
     {
       "LAT": "-39.18982",
@@ -1324,12 +914,7 @@
       "SPEED": "178",
       "COURSE": "88",
       "HEADING": "88",
-      "ELAPSED": 1606677960.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606677960.0
     },
     {
       "LAT": "-39.19041",
@@ -1337,12 +922,7 @@
       "SPEED": "186",
       "COURSE": "90",
       "HEADING": "90",
-      "ELAPSED": 1606679400.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606679400.0
     },
     {
       "LAT": "-39.18265",
@@ -1350,12 +930,7 @@
       "SPEED": "162",
       "COURSE": "91",
       "HEADING": "91",
-      "ELAPSED": 1606686720.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606686720.0
     },
     {
       "LAT": "-39.18997",
@@ -1363,12 +938,7 @@
       "SPEED": "173",
       "COURSE": "90",
       "HEADING": "90",
-      "ELAPSED": 1606687860.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606687860.0
     },
     {
       "LAT": "-40.11281",
@@ -1376,12 +946,7 @@
       "SPEED": "128",
       "COURSE": "112",
       "HEADING": "112",
-      "ELAPSED": 1606736460.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606736460.0
     },
     {
       "LAT": "-40.18135",
@@ -1389,12 +954,7 @@
       "SPEED": "189",
       "COURSE": "98",
       "HEADING": "98",
-      "ELAPSED": 1606740180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606740180.0
     },
     {
       "LAT": "-40.1889",
@@ -1402,12 +962,7 @@
       "SPEED": "215",
       "COURSE": "104",
       "HEADING": "104",
-      "ELAPSED": 1606740720.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606740720.0
     },
     {
       "LAT": "-40.19295",
@@ -1415,12 +970,7 @@
       "SPEED": "150",
       "COURSE": "94",
       "HEADING": "94",
-      "ELAPSED": 1606741080.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606741080.0
     },
     {
       "LAT": "-40.20054",
@@ -1428,12 +978,7 @@
       "SPEED": "238",
       "COURSE": "92",
       "HEADING": "92",
-      "ELAPSED": 1606741740.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606741740.0
     },
     {
       "LAT": "-40.2274",
@@ -1441,12 +986,7 @@
       "SPEED": "209",
       "COURSE": "103",
       "HEADING": "103",
-      "ELAPSED": 1606744320.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606744320.0
     },
     {
       "LAT": "-40.23312",
@@ -1454,12 +994,7 @@
       "SPEED": "170",
       "COURSE": "106",
       "HEADING": "106",
-      "ELAPSED": 1606744800.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606744800.0
     },
     {
       "LAT": "-40.2977",
@@ -1467,12 +1002,7 @@
       "SPEED": "179",
       "COURSE": "96",
       "HEADING": "96",
-      "ELAPSED": 1606751220.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606751220.0
     },
     {
       "LAT": "-40.30165",
@@ -1480,12 +1010,7 @@
       "SPEED": "169",
       "COURSE": "96",
       "HEADING": "96",
-      "ELAPSED": 1606751880.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606751880.0
     },
     {
       "LAT": "-40.30502",
@@ -1493,12 +1018,7 @@
       "SPEED": "151",
       "COURSE": "85",
       "HEADING": "85",
-      "ELAPSED": 1606753260.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606753260.0
     },
     {
       "LAT": "-40.30479",
@@ -1506,12 +1026,7 @@
       "SPEED": "136",
       "COURSE": "92",
       "HEADING": "92",
-      "ELAPSED": 1606754280.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606754280.0
     },
     {
       "LAT": "-40.30683",
@@ -1519,12 +1034,7 @@
       "SPEED": "125",
       "COURSE": "94",
       "HEADING": "94",
-      "ELAPSED": 1606755780.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606755780.0
     },
     {
       "LAT": "-41.83839",
@@ -1532,12 +1042,7 @@
       "SPEED": "104",
       "COURSE": "78",
       "HEADING": "78",
-      "ELAPSED": 1606844820.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606844820.0
     },
     {
       "LAT": "-41.81268",
@@ -1545,12 +1050,7 @@
       "SPEED": "194",
       "COURSE": "52",
       "HEADING": "52",
-      "ELAPSED": 1606845720.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606845720.0
     },
     {
       "LAT": "-41.78647",
@@ -1558,12 +1058,7 @@
       "SPEED": "115",
       "COURSE": "63",
       "HEADING": "63",
-      "ELAPSED": 1606846680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606846680.0
     },
     {
       "LAT": "-41.76001",
@@ -1571,12 +1066,7 @@
       "SPEED": "108",
       "COURSE": "60",
       "HEADING": "60",
-      "ELAPSED": 1606847820.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606847820.0
     },
     {
       "LAT": "-41.69506",
@@ -1584,12 +1074,7 @@
       "SPEED": "131",
       "COURSE": "54",
       "HEADING": "54",
-      "ELAPSED": 1606850460.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606850460.0
     },
     {
       "LAT": "-41.67998",
@@ -1597,12 +1082,7 @@
       "SPEED": "124",
       "COURSE": "59",
       "HEADING": "59",
-      "ELAPSED": 1606851000.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606851000.0
     },
     {
       "LAT": "-41.63348",
@@ -1610,12 +1090,7 @@
       "SPEED": "113",
       "COURSE": "51",
       "HEADING": "51",
-      "ELAPSED": 1606852620.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606852620.0
     },
     {
       "LAT": "-41.6152",
@@ -1623,12 +1098,7 @@
       "SPEED": "80",
       "COURSE": "56",
       "HEADING": "56",
-      "ELAPSED": 1606853160.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606853160.0
     },
     {
       "LAT": "-41.60224",
@@ -1636,12 +1106,7 @@
       "SPEED": "139",
       "COURSE": "58",
       "HEADING": "58",
-      "ELAPSED": 1606853580.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606853580.0
     },
     {
       "LAT": "-41.55347",
@@ -1649,12 +1114,7 @@
       "SPEED": "81",
       "COURSE": "60",
       "HEADING": "60",
-      "ELAPSED": 1606855200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606855200.0
     },
     {
       "LAT": "-41.51239",
@@ -1662,12 +1122,7 @@
       "SPEED": "92",
       "COURSE": "52",
       "HEADING": "52",
-      "ELAPSED": 1606856580.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856580.0
     },
     {
       "LAT": "-41.50972",
@@ -1675,12 +1130,7 @@
       "SPEED": "105",
       "COURSE": "62",
       "HEADING": "62",
-      "ELAPSED": 1606856700.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856700.0
     },
     {
       "LAT": "-41.49481",
@@ -1688,12 +1138,7 @@
       "SPEED": "105",
       "COURSE": "36",
       "HEADING": "36",
-      "ELAPSED": 1606857180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606857180.0
     },
     {
       "LAT": "-41.46884",
@@ -1701,12 +1146,7 @@
       "SPEED": "125",
       "COURSE": "58",
       "HEADING": "58",
-      "ELAPSED": 1606858020.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858020.0
     },
     {
       "LAT": "-41.44533",
@@ -1714,12 +1154,55 @@
       "SPEED": "134",
       "COURSE": "62",
       "HEADING": "62",
-      "ELAPSED": 1606858800.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858800.0
+    },
+    {
+      "LAT": "-38.891",
+      "LON": "9.293732",
+      "SPEED": "163",
+      "COURSE": "52",
+      "HEADING": "52",
+      "ELAPSED": 1606932720.0
+    },
+    {
+      "LAT": "-38.77811",
+      "LON": "9.573883",
+      "SPEED": "205",
+      "COURSE": "63",
+      "HEADING": "63",
+      "ELAPSED": 1606936560.0
+    },
+    {
+      "LAT": "-38.74717",
+      "LON": "9.64959",
+      "SPEED": "122",
+      "COURSE": "63",
+      "HEADING": "63",
+      "ELAPSED": 1606937460.0
+    },
+    {
+      "LAT": "-38.71007",
+      "LON": "9.726983",
+      "SPEED": "132",
+      "COURSE": "57",
+      "HEADING": "57",
+      "ELAPSED": 1606938480.0
+    },
+    {
+      "LAT": "-38.67609",
+      "LON": "9.793427",
+      "SPEED": "163",
+      "COURSE": "47",
+      "HEADING": "47",
+      "ELAPSED": 1606939440.0
+    },
+    {
+      "LAT": "-38.6309",
+      "LON": "9.895353",
+      "SPEED": "126",
+      "COURSE": "67",
+      "HEADING": "67",
+      "ELAPSED": 1606940880.0
     }
   ],
   "CAM": [
@@ -1729,12 +1212,7 @@
       "SPEED": "157",
       "COURSE": "99",
       "HEADING": "99",
-      "ELAPSED": 1606665240.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606665240.0
     },
     {
       "LAT": "-38.70092",
@@ -1742,12 +1220,7 @@
       "SPEED": "193",
       "COURSE": "108",
       "HEADING": "108",
-      "ELAPSED": 1606667520.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606667520.0
     },
     {
       "LAT": "-38.77244",
@@ -1755,12 +1228,7 @@
       "SPEED": "152",
       "COURSE": "121",
       "HEADING": "121",
-      "ELAPSED": 1606669860.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606669860.0
     },
     {
       "LAT": "-38.82487",
@@ -1768,12 +1236,7 @@
       "SPEED": "194",
       "COURSE": "115",
       "HEADING": "115",
-      "ELAPSED": 1606670880.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606670880.0
     },
     {
       "LAT": "-38.90682",
@@ -1781,12 +1244,7 @@
       "SPEED": "149",
       "COURSE": "101",
       "HEADING": "101",
-      "ELAPSED": 1606673700.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606673700.0
     },
     {
       "LAT": "-38.985",
@@ -1794,12 +1252,7 @@
       "SPEED": "119",
       "COURSE": "88",
       "HEADING": "88",
-      "ELAPSED": 1606676940.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606676940.0
     },
     {
       "LAT": "-39.00592",
@@ -1807,12 +1260,7 @@
       "SPEED": "170",
       "COURSE": "125",
       "HEADING": "125",
-      "ELAPSED": 1606677840.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606677840.0
     },
     {
       "LAT": "-39.05618",
@@ -1820,12 +1268,7 @@
       "SPEED": "213",
       "COURSE": "106",
       "HEADING": "106",
-      "ELAPSED": 1606679820.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606679820.0
     },
     {
       "LAT": "-39.12677",
@@ -1833,12 +1276,7 @@
       "SPEED": "110",
       "COURSE": "105",
       "HEADING": "105",
-      "ELAPSED": 1606682400.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606682400.0
     },
     {
       "LAT": "-39.1429",
@@ -1846,12 +1284,7 @@
       "SPEED": "191",
       "COURSE": "91",
       "HEADING": "91",
-      "ELAPSED": 1606684140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606684140.0
     },
     {
       "LAT": "-39.15382",
@@ -1859,12 +1292,7 @@
       "SPEED": "142",
       "COURSE": "99",
       "HEADING": "99",
-      "ELAPSED": 1606684560.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606684560.0
     },
     {
       "LAT": "-39.18633",
@@ -1872,12 +1300,7 @@
       "SPEED": "163",
       "COURSE": "104",
       "HEADING": "104",
-      "ELAPSED": 1606686720.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606686720.0
     },
     {
       "LAT": "-39.19624",
@@ -1885,12 +1308,7 @@
       "SPEED": "163",
       "COURSE": "111",
       "HEADING": "111",
-      "ELAPSED": 1606687680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606687680.0
     },
     {
       "LAT": "-40.4453",
@@ -1898,12 +1316,7 @@
       "SPEED": "177",
       "COURSE": "112",
       "HEADING": "112",
-      "ELAPSED": 1606736400.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606736400.0
     },
     {
       "LAT": "-40.57716",
@@ -1911,13 +1324,7 @@
       "SPEED": "161",
       "COURSE": "123",
       "HEADING": "123",
-      "ELAPSED": 1606740180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown",
-      "INVALID_DIMENSIONS": "0"
+      "ELAPSED": 1606740180.0
     },
     {
       "LAT": "-40.57387",
@@ -1925,12 +1332,7 @@
       "SPEED": "154",
       "COURSE": "114",
       "HEADING": "114",
-      "ELAPSED": 1606740360.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606740360.0
     },
     {
       "LAT": "-40.60141",
@@ -1938,12 +1340,7 @@
       "SPEED": "199",
       "COURSE": "122",
       "HEADING": "122",
-      "ELAPSED": 1606741140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606741140.0
     },
     {
       "LAT": "-40.75846",
@@ -1951,12 +1348,7 @@
       "SPEED": "156",
       "COURSE": "116",
       "HEADING": "116",
-      "ELAPSED": 1606744440.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606744440.0
     },
     {
       "LAT": "-40.78062",
@@ -1964,12 +1356,7 @@
       "SPEED": "102",
       "COURSE": "116",
       "HEADING": "116",
-      "ELAPSED": 1606745280.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606745280.0
     },
     {
       "LAT": "-40.91302",
@@ -1977,12 +1364,7 @@
       "SPEED": "140",
       "COURSE": "130",
       "HEADING": "130",
-      "ELAPSED": 1606753920.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606753920.0
     },
     {
       "LAT": "-40.12321",
@@ -1990,27 +1372,7 @@
       "SPEED": "192",
       "COURSE": "77",
       "HEADING": "77",
-      "ELAPSED": 1606845480.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown",
-      "INVALID_DIMENSIONS": "0"
-    },
-    {
-      "LAT": "-40.12321",
-      "LON": "15.01657",
-      "SPEED": "192",
-      "COURSE": "77",
-      "HEADING": "77",
-      "ELAPSED": 1606845540.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown",
-      "INVALID_DIMENSIONS": "0"
+      "ELAPSED": 1606845540.0
     },
     {
       "LAT": "-40.17348",
@@ -2018,12 +1380,7 @@
       "SPEED": "158",
       "COURSE": "90",
       "HEADING": "90",
-      "ELAPSED": 1606847220.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606847220.0
     },
     {
       "LAT": "-40.19442",
@@ -2031,12 +1388,7 @@
       "SPEED": "130",
       "COURSE": "99",
       "HEADING": "99",
-      "ELAPSED": 1606850280.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606850280.0
     },
     {
       "LAT": "-40.19769",
@@ -2044,12 +1396,7 @@
       "SPEED": "165",
       "COURSE": "89",
       "HEADING": "89",
-      "ELAPSED": 1606851300.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606851300.0
     },
     {
       "LAT": "-40.20937",
@@ -2057,12 +1404,7 @@
       "SPEED": "191",
       "COURSE": "74",
       "HEADING": "74",
-      "ELAPSED": 1606852680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606852680.0
     },
     {
       "LAT": "-40.21405",
@@ -2070,12 +1412,7 @@
       "SPEED": "127",
       "COURSE": "88",
       "HEADING": "88",
-      "ELAPSED": 1606854780.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606854780.0
     },
     {
       "LAT": "-40.20905",
@@ -2083,12 +1420,7 @@
       "SPEED": "128",
       "COURSE": "86",
       "HEADING": "86",
-      "ELAPSED": 1606856460.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856460.0
     },
     {
       "LAT": "-40.20405",
@@ -2096,12 +1428,7 @@
       "SPEED": "138",
       "COURSE": "86",
       "HEADING": "86",
-      "ELAPSED": 1606856760.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856760.0
     },
     {
       "LAT": "-40.20397",
@@ -2109,12 +1436,55 @@
       "SPEED": "175",
       "COURSE": "91",
       "HEADING": "91",
-      "ELAPSED": 1606858620.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858620.0
+    },
+    {
+      "LAT": "-38.69089",
+      "LON": "22.77738",
+      "SPEED": "182",
+      "COURSE": "39",
+      "HEADING": "39",
+      "ELAPSED": 1606933440.0
+    },
+    {
+      "LAT": "-38.54815",
+      "LON": "22.94357",
+      "SPEED": "90",
+      "COURSE": "50",
+      "HEADING": "50",
+      "ELAPSED": 1606936560.0
+    },
+    {
+      "LAT": "-38.47109",
+      "LON": "23.02878",
+      "SPEED": "193",
+      "COURSE": "46",
+      "HEADING": "46",
+      "ELAPSED": 1606937940.0
+    },
+    {
+      "LAT": "-38.40457",
+      "LON": "23.11494",
+      "SPEED": "88",
+      "COURSE": "70",
+      "HEADING": "70",
+      "ELAPSED": 1606938540.0
+    },
+    {
+      "LAT": "-38.4609",
+      "LON": "23.25603",
+      "SPEED": "204",
+      "COURSE": "127",
+      "HEADING": "127",
+      "ELAPSED": 1606940580.0
+    },
+    {
+      "LAT": "-38.49283",
+      "LON": "23.32917",
+      "SPEED": "196",
+      "COURSE": "114",
+      "HEADING": "114",
+      "ELAPSED": 1606941000.0
     }
   ],
   "ARKEA": [
@@ -2124,12 +1494,7 @@
       "SPEED": "189",
       "COURSE": "120",
       "HEADING": "120",
-      "ELAPSED": 1606668900.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606668900.0
     },
     {
       "LAT": "-38.65383",
@@ -2137,12 +1502,7 @@
       "SPEED": "182",
       "COURSE": "107",
       "HEADING": "107",
-      "ELAPSED": 1606670280.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606670280.0
     },
     {
       "LAT": "-38.68341",
@@ -2150,12 +1510,7 @@
       "SPEED": "192",
       "COURSE": "112",
       "HEADING": "112",
-      "ELAPSED": 1606671180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606671180.0
     },
     {
       "LAT": "-38.68568",
@@ -2163,12 +1518,7 @@
       "SPEED": "230",
       "COURSE": "115",
       "HEADING": "115",
-      "ELAPSED": 1606671300.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606671300.0
     },
     {
       "LAT": "-38.76357",
@@ -2176,12 +1526,7 @@
       "SPEED": "210",
       "COURSE": "101",
       "HEADING": "101",
-      "ELAPSED": 1606673640.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606673640.0
     },
     {
       "LAT": "-38.84813",
@@ -2189,12 +1534,7 @@
       "SPEED": "240",
       "COURSE": "116",
       "HEADING": "116",
-      "ELAPSED": 1606675980.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606675980.0
     },
     {
       "LAT": "-38.91335",
@@ -2202,12 +1542,7 @@
       "SPEED": "178",
       "COURSE": "114",
       "HEADING": "114",
-      "ELAPSED": 1606677600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606677600.0
     },
     {
       "LAT": "-38.95577",
@@ -2215,12 +1550,7 @@
       "SPEED": "183",
       "COURSE": "102",
       "HEADING": "102",
-      "ELAPSED": 1606679580.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606679580.0
     },
     {
       "LAT": "-39.02755",
@@ -2228,12 +1558,7 @@
       "SPEED": "75",
       "COURSE": "77",
       "HEADING": "77",
-      "ELAPSED": 1606682640.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606682640.0
     },
     {
       "LAT": "-39.02252",
@@ -2241,12 +1566,7 @@
       "SPEED": "159",
       "COURSE": "123",
       "HEADING": "123",
-      "ELAPSED": 1606683840.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606683840.0
     },
     {
       "LAT": "-39.09941",
@@ -2254,12 +1574,7 @@
       "SPEED": "213",
       "COURSE": "107",
       "HEADING": "107",
-      "ELAPSED": 1606685340.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606685340.0
     },
     {
       "LAT": "-39.11983",
@@ -2267,12 +1582,7 @@
       "SPEED": "176",
       "COURSE": "106",
       "HEADING": "106",
-      "ELAPSED": 1606686240.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606686240.0
     },
     {
       "LAT": "-39.16689",
@@ -2280,12 +1590,7 @@
       "SPEED": "176",
       "COURSE": "112",
       "HEADING": "112",
-      "ELAPSED": 1606687860.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606687860.0
     },
     {
       "LAT": "-40.68888",
@@ -2293,12 +1598,7 @@
       "SPEED": "183",
       "COURSE": "134",
       "HEADING": "134",
-      "ELAPSED": 1606736040.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606736040.0
     },
     {
       "LAT": "-41.11147",
@@ -2306,13 +1606,7 @@
       "SPEED": "143",
       "COURSE": "114",
       "HEADING": "114",
-      "ELAPSED": 1606739700.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown",
-      "INVALID_DIMENSIONS": "1"
+      "ELAPSED": 1606739700.0
     },
     {
       "LAT": "-41.17724",
@@ -2320,12 +1614,7 @@
       "SPEED": "102",
       "COURSE": "117",
       "HEADING": "117",
-      "ELAPSED": 1606741140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606741140.0
     },
     {
       "LAT": "-41.18993",
@@ -2333,12 +1622,7 @@
       "SPEED": "124",
       "COURSE": "110",
       "HEADING": "110",
-      "ELAPSED": 1606742100.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606742100.0
     },
     {
       "LAT": "-41.27416",
@@ -2346,12 +1630,7 @@
       "SPEED": "210",
       "COURSE": "117",
       "HEADING": "117",
-      "ELAPSED": 1606744680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606744680.0
     },
     {
       "LAT": "-41.28416",
@@ -2359,12 +1638,7 @@
       "SPEED": "195",
       "COURSE": "118",
       "HEADING": "118",
-      "ELAPSED": 1606745100.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606745100.0
     },
     {
       "LAT": "-41.44832",
@@ -2372,12 +1646,7 @@
       "SPEED": "170",
       "COURSE": "93",
       "HEADING": "93",
-      "ELAPSED": 1606751100.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606751100.0
     },
     {
       "LAT": "-41.45685",
@@ -2385,12 +1654,7 @@
       "SPEED": "191",
       "COURSE": "103",
       "HEADING": "103",
-      "ELAPSED": 1606752000.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606752000.0
     },
     {
       "LAT": "-41.51329",
@@ -2398,12 +1662,7 @@
       "SPEED": "147",
       "COURSE": "102",
       "HEADING": "102",
-      "ELAPSED": 1606755240.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606755240.0
     },
     {
       "LAT": "-40.7624",
@@ -2411,12 +1670,7 @@
       "SPEED": "152",
       "COURSE": "86",
       "HEADING": "86",
-      "ELAPSED": 1606844760.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606844760.0
     },
     {
       "LAT": "-40.7624",
@@ -2424,12 +1678,7 @@
       "SPEED": "152",
       "COURSE": "86",
       "HEADING": "86",
-      "ELAPSED": 1606844760.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606844760.0
     },
     {
       "LAT": "-40.77565",
@@ -2437,12 +1686,7 @@
       "SPEED": "212",
       "COURSE": "98",
       "HEADING": "98",
-      "ELAPSED": 1606847100.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606847100.0
     },
     {
       "LAT": "-40.77615",
@@ -2450,12 +1694,7 @@
       "SPEED": "168",
       "COURSE": "96",
       "HEADING": "96",
-      "ELAPSED": 1606849800.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606849800.0
     },
     {
       "LAT": "-40.81535",
@@ -2463,12 +1702,7 @@
       "SPEED": "176",
       "COURSE": "104",
       "HEADING": "104",
-      "ELAPSED": 1606852560.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606852560.0
     },
     {
       "LAT": "-40.81818",
@@ -2476,12 +1710,7 @@
       "SPEED": "159",
       "COURSE": "102",
       "HEADING": "102",
-      "ELAPSED": 1606852740.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606852740.0
     },
     {
       "LAT": "-40.83357",
@@ -2489,12 +1718,7 @@
       "SPEED": "190",
       "COURSE": "96",
       "HEADING": "96",
-      "ELAPSED": 1606854300.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606854300.0
     },
     {
       "LAT": "-40.86462",
@@ -2502,12 +1726,7 @@
       "SPEED": "141",
       "COURSE": "97",
       "HEADING": "97",
-      "ELAPSED": 1606855380.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606855380.0
     },
     {
       "LAT": "-40.86985",
@@ -2515,12 +1734,7 @@
       "SPEED": "153",
       "COURSE": "113",
       "HEADING": "113",
-      "ELAPSED": 1606855920.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606855920.0
     },
     {
       "LAT": "-40.8884",
@@ -2528,12 +1742,7 @@
       "SPEED": "142",
       "COURSE": "97",
       "HEADING": "97",
-      "ELAPSED": 1606856520.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856520.0
     },
     {
       "LAT": "-40.93265",
@@ -2541,12 +1750,39 @@
       "SPEED": "114",
       "COURSE": "106",
       "HEADING": "106",
-      "ELAPSED": 1606858380.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858380.0
+    },
+    {
+      "LAT": "-41.40373",
+      "LON": "21.54369",
+      "SPEED": "92",
+      "COURSE": "33",
+      "HEADING": "33",
+      "ELAPSED": 1606929000.0
+    },
+    {
+      "LAT": "-41.16749",
+      "LON": "21.7946",
+      "SPEED": "92",
+      "COURSE": "37",
+      "HEADING": "37",
+      "ELAPSED": 1606937340.0
+    },
+    {
+      "LAT": "-41.088",
+      "LON": "21.86378",
+      "SPEED": "57",
+      "COURSE": "16",
+      "HEADING": "16",
+      "ELAPSED": 1606939740.0
+    },
+    {
+      "LAT": "-41.07789",
+      "LON": "21.87073",
+      "SPEED": "130",
+      "COURSE": "30",
+      "HEADING": "30",
+      "ELAPSED": 1606940160.0
     }
   ],
   "MAITRE": [
@@ -2556,12 +1792,7 @@
       "SPEED": "143",
       "COURSE": "121",
       "HEADING": "121",
-      "ELAPSED": 1606668840.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606668840.0
     },
     {
       "LAT": "-38.68799",
@@ -2569,12 +1800,7 @@
       "SPEED": "222",
       "COURSE": "101",
       "HEADING": "101",
-      "ELAPSED": 1606673700.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606673700.0
     },
     {
       "LAT": "-38.7395",
@@ -2582,12 +1808,7 @@
       "SPEED": "198",
       "COURSE": "107",
       "HEADING": "107",
-      "ELAPSED": 1606675320.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606675320.0
     },
     {
       "LAT": "-38.82825",
@@ -2595,12 +1816,7 @@
       "SPEED": "167",
       "COURSE": "106",
       "HEADING": "106",
-      "ELAPSED": 1606678080.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606678080.0
     },
     {
       "LAT": "-38.85756",
@@ -2608,12 +1824,7 @@
       "SPEED": "155",
       "COURSE": "109",
       "HEADING": "109",
-      "ELAPSED": 1606679460.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606679460.0
     },
     {
       "LAT": "-38.9496",
@@ -2621,12 +1832,7 @@
       "SPEED": "185",
       "COURSE": "125",
       "HEADING": "125",
-      "ELAPSED": 1606682280.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606682280.0
     },
     {
       "LAT": "-38.99053",
@@ -2634,12 +1840,7 @@
       "SPEED": "187",
       "COURSE": "115",
       "HEADING": "115",
-      "ELAPSED": 1606684080.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606684080.0
     },
     {
       "LAT": "-39.02485",
@@ -2647,12 +1848,7 @@
       "SPEED": "158",
       "COURSE": "123",
       "HEADING": "123",
-      "ELAPSED": 1606684500.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606684500.0
     },
     {
       "LAT": "-39.09812",
@@ -2660,12 +1856,7 @@
       "SPEED": "225",
       "COURSE": "114",
       "HEADING": "114",
-      "ELAPSED": 1606686780.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606686780.0
     },
     {
       "LAT": "-39.11161",
@@ -2673,12 +1864,7 @@
       "SPEED": "189",
       "COURSE": "108",
       "HEADING": "108",
-      "ELAPSED": 1606687500.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606687500.0
     },
     {
       "LAT": "-40.85757",
@@ -2686,13 +1872,7 @@
       "SPEED": "140",
       "COURSE": "130",
       "HEADING": "130",
-      "ELAPSED": 1606739040.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown",
-      "INVALID_DIMENSIONS": "0"
+      "ELAPSED": 1606739040.0
     },
     {
       "LAT": "-40.94195",
@@ -2700,12 +1880,7 @@
       "SPEED": "181",
       "COURSE": "129",
       "HEADING": "129",
-      "ELAPSED": 1606740960.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606740960.0
     },
     {
       "LAT": "-40.98229",
@@ -2713,12 +1888,7 @@
       "SPEED": "257",
       "COURSE": "126",
       "HEADING": "126",
-      "ELAPSED": 1606741920.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606741920.0
     },
     {
       "LAT": "-41.03158",
@@ -2726,12 +1896,7 @@
       "SPEED": "149",
       "COURSE": "122",
       "HEADING": "122",
-      "ELAPSED": 1606743060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606743060.0
     },
     {
       "LAT": "-41.0464",
@@ -2739,12 +1904,7 @@
       "SPEED": "182",
       "COURSE": "135",
       "HEADING": "135",
-      "ELAPSED": 1606743600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606743600.0
     },
     {
       "LAT": "-41.3493",
@@ -2752,12 +1912,7 @@
       "SPEED": "148",
       "COURSE": "125",
       "HEADING": "125",
-      "ELAPSED": 1606751160.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606751160.0
     },
     {
       "LAT": "-41.39428",
@@ -2765,12 +1920,7 @@
       "SPEED": "173",
       "COURSE": "121",
       "HEADING": "121",
-      "ELAPSED": 1606751880.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606751880.0
     },
     {
       "LAT": "-41.40483",
@@ -2778,12 +1928,7 @@
       "SPEED": "204",
       "COURSE": "127",
       "HEADING": "127",
-      "ELAPSED": 1606752180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606752180.0
     },
     {
       "LAT": "-41.47626",
@@ -2791,12 +1936,7 @@
       "SPEED": "199",
       "COURSE": "113",
       "HEADING": "113",
-      "ELAPSED": 1606753860.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606753860.0
     },
     {
       "LAT": "-41.51191",
@@ -2804,12 +1944,7 @@
       "SPEED": "203",
       "COURSE": "113",
       "HEADING": "113",
-      "ELAPSED": 1606754520.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606754520.0
     },
     {
       "LAT": "-40.84468",
@@ -2817,13 +1952,7 @@
       "SPEED": "95",
       "COURSE": "104",
       "HEADING": "104",
-      "ELAPSED": 1606843140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown",
-      "INVALID_DIMENSIONS": "0"
+      "ELAPSED": 1606843140.0
     },
     {
       "LAT": "-40.83329",
@@ -2831,12 +1960,7 @@
       "SPEED": "87",
       "COURSE": "60",
       "HEADING": "60",
-      "ELAPSED": 1606846680.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606846680.0
     },
     {
       "LAT": "-40.81006",
@@ -2844,12 +1968,7 @@
       "SPEED": "164",
       "COURSE": "94",
       "HEADING": "94",
-      "ELAPSED": 1606848540.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606848540.0
     },
     {
       "LAT": "-40.87456",
@@ -2857,12 +1976,7 @@
       "SPEED": "172",
       "COURSE": "87",
       "HEADING": "87",
-      "ELAPSED": 1606852620.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606852620.0
     },
     {
       "LAT": "-40.91532",
@@ -2870,12 +1984,7 @@
       "SPEED": "172",
       "COURSE": "109",
       "HEADING": "109",
-      "ELAPSED": 1606856400.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606856400.0
     },
     {
       "LAT": "-40.96649",
@@ -2883,274 +1992,39 @@
       "SPEED": "144",
       "COURSE": "114",
       "HEADING": "114",
-      "ELAPSED": 1606858140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    }
-  ],
-  "INITIATIVE": [
-    {
-      "LAT": "-41.1062",
-      "LON": "-5.22049",
-      "SPEED": "141",
-      "COURSE": "100",
-      "HEADING": "100",
-      "ELAPSED": 1606665060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606858140.0
     },
     {
-      "LAT": "-41.1062",
-      "LON": "-5.22049",
-      "SPEED": "141",
-      "COURSE": "100",
-      "HEADING": "100",
-      "ELAPSED": 1606665000.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.1062",
-      "LON": "-5.22049",
-      "SPEED": "141",
-      "COURSE": "100",
-      "HEADING": "100",
-      "ELAPSED": 1606665060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.37403",
-      "LON": "-3.628648",
-      "SPEED": "145",
-      "COURSE": "100",
-      "HEADING": "100",
-      "ELAPSED": 1606681980.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.39973",
-      "LON": "-3.466628",
-      "SPEED": "151",
-      "COURSE": "103",
-      "HEADING": "103",
-      "ELAPSED": 1606683720.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.40807",
-      "LON": "-3.409458",
-      "SPEED": "89",
-      "COURSE": "73",
-      "HEADING": "73",
-      "ELAPSED": 1606684440.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-42.66413",
-      "LON": "1.650032",
-      "SPEED": "211",
-      "COURSE": "108",
-      "HEADING": "108",
-      "ELAPSED": 1606737840.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-42.66413",
-      "LON": "1.650032",
-      "SPEED": "211",
-      "COURSE": "108",
-      "HEADING": "108",
-      "ELAPSED": 1606737840.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-42.74529",
-      "LON": "2.19102",
-      "SPEED": "184",
-      "COURSE": "101",
-      "HEADING": "101",
-      "ELAPSED": 1606743180.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-42.80048",
-      "LON": "2.967895",
-      "SPEED": "157",
-      "COURSE": "102",
-      "HEADING": "102",
-      "ELAPSED": 1606750200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-42.80353",
-      "LON": "3.027585",
-      "SPEED": "193",
-      "COURSE": "93",
-      "HEADING": "93",
-      "ELAPSED": 1606750500.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-42.8047",
-      "LON": "3.286195",
-      "SPEED": "166",
-      "COURSE": "90",
-      "HEADING": "90",
-      "ELAPSED": 1606752720.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-42.80888",
-      "LON": "3.36395",
-      "SPEED": "147",
-      "COURSE": "94",
-      "HEADING": "94",
-      "ELAPSED": 1606753440.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-43.52477",
-      "LON": "11.99263",
-      "SPEED": "147",
-      "COURSE": "47",
-      "HEADING": "47",
-      "ELAPSED": 1606845060.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-43.41323",
-      "LON": "12.1831",
-      "SPEED": "180",
-      "COURSE": "47",
-      "HEADING": "47",
-      "ELAPSED": 1606847460.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-43.37896",
-      "LON": "12.24566",
-      "SPEED": "206",
-      "COURSE": "64",
-      "HEADING": "64",
-      "ELAPSED": 1606848540.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-43.2395",
-      "LON": "12.5359",
-      "SPEED": "157",
-      "COURSE": "58",
-      "HEADING": "58",
-      "ELAPSED": 1606851420.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-43.05205",
-      "LON": "12.88965",
-      "SPEED": "112",
+      "LAT": "-39.82158",
+      "LON": "21.83847",
+      "SPEED": "163",
       "COURSE": "52",
       "HEADING": "52",
-      "ELAPSED": 1606856100.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606934040.0
     },
     {
-      "LAT": "-42.9267",
-      "LON": "13.10651",
-      "SPEED": "205",
-      "COURSE": "53",
-      "HEADING": "53",
-      "ELAPSED": 1606858140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "LAT": "-39.78979",
+      "LON": "21.88185",
+      "SPEED": "211",
+      "COURSE": "40",
+      "HEADING": "40",
+      "ELAPSED": 1606935360.0
     },
     {
-      "LAT": "-42.93216",
-      "LON": "13.09614",
-      "SPEED": "185",
-      "COURSE": "53",
-      "HEADING": "53",
-      "ELAPSED": 1606858500.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "LAT": "-39.36167",
+      "LON": "22.7024",
+      "SPEED": "206",
+      "COURSE": "108",
+      "HEADING": "108",
+      "ELAPSED": 1606937100.0
+    },
+    {
+      "LAT": "-39.47807",
+      "LON": "23.12236",
+      "SPEED": "197",
+      "COURSE": "102",
+      "HEADING": "102",
+      "ELAPSED": 1606940760.0
     }
   ],
   "BURTON": [
@@ -3160,220 +2034,7 @@
       "SPEED": "190",
       "COURSE": "109",
       "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662660.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662660.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662660.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662660.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662600.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-41.72591",
-      "LON": "-1.872258",
-      "SPEED": "190",
-      "COURSE": "109",
-      "HEADING": "109",
-      "ELAPSED": 1606662660.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606662660.0
     },
     {
       "LAT": "-42.22896",
@@ -3381,12 +2042,7 @@
       "SPEED": "154",
       "COURSE": "114",
       "HEADING": "114",
-      "ELAPSED": 1606682340.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606682340.0
     },
     {
       "LAT": "-43.76915",
@@ -3394,12 +2050,7 @@
       "SPEED": "173",
       "COURSE": "114",
       "HEADING": "114",
-      "ELAPSED": 1606728720.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606728720.0
     },
     {
       "LAT": "-43.99821",
@@ -3407,12 +2058,7 @@
       "SPEED": "185",
       "COURSE": "96",
       "HEADING": "96",
-      "ELAPSED": 1606737420.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606737420.0
     },
     {
       "LAT": "-44.06579",
@@ -3420,12 +2066,7 @@
       "SPEED": "185",
       "COURSE": "104",
       "HEADING": "104",
-      "ELAPSED": 1606744560.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606744560.0
     },
     {
       "LAT": "-44.07598",
@@ -3433,12 +2074,7 @@
       "SPEED": "203",
       "COURSE": "101",
       "HEADING": "101",
-      "ELAPSED": 1606744860.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606744860.0
     },
     {
       "LAT": "-44.11676",
@@ -3446,12 +2082,7 @@
       "SPEED": "268",
       "COURSE": "90",
       "HEADING": "90",
-      "ELAPSED": 1606749360.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606749360.0
     },
     {
       "LAT": "-44.47199",
@@ -3459,142 +2090,7 @@
       "SPEED": "165",
       "COURSE": "74",
       "HEADING": "74",
-      "ELAPSED": 1606834200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834260.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834260.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834260.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
-    },
-    {
-      "LAT": "-44.47199",
-      "LON": "17.19297",
-      "SPEED": "165",
-      "COURSE": "74",
-      "HEADING": "74",
-      "ELAPSED": 1606834200.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606834200.0
     },
     {
       "LAT": "-44.47097",
@@ -3602,12 +2098,15 @@
       "SPEED": "157",
       "COURSE": "98",
       "HEADING": "98",
-      "ELAPSED": 1606852140.0,
-      "SHIPNAME": "[SAT-AIS]",
-      "SHIPTYPE": "9",
-      "TYPE_IMG": "9",
-      "TYPE_NAME": "Pleasure Craft",
-      "STATUS_NAME": "Unknown"
+      "ELAPSED": 1606852140.0
+    },
+    {
+      "LAT": "-43.69008",
+      "LON": "26.10938",
+      "SPEED": "206",
+      "COURSE": "67",
+      "HEADING": "67",
+      "ELAPSED": 1606916160.0
     }
   ]
 }

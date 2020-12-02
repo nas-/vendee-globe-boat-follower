@@ -1,9 +1,8 @@
-CONFIG = {'LINKED': 'https://www.marinetraffic.com/en/ais/home/centerx:20.045/centery:-40.537/zoom:13',
-          'BOSS': 'https://www.marinetraffic.com/en/ais/home/centerx:5.539/centery:-41.844/zoom:12',
-          'APIVIA': 'https://www.marinetraffic.com/en/ais/home/centerx:24.706/centery:-41.772/zoom:12',
-          'CAM': 'https://www.marinetraffic.com/en/ais/home/centerx:14.987/centery:-40.130/zoom:15',
-          'ARKEA': 'https://www.marinetraffic.com/en/ais/home/centerx:15.736/centery:-40.772/zoom:13',
-          'MAITRE': 'https://www.marinetraffic.com/en/ais/home/centerx:14.252/centery:-40.847/zoom:14',
-          'INITIATIVE': 'https://www.marinetraffic.com/en/ais/home/centerx:12.1/centery:-43.5/zoom:11',
-          'BURTON': 'https://www.marinetraffic.com/en/ais/home/centerx:17.248/centery:-44.465/zoom:13'
+CONFIG = {'LINKED': 'https://www.marinetraffic.com/en/ais/home/centerx:28.2/centery:-39.6/zoom:10',
+          'BOSS': 'https://www.marinetraffic.com/en/ais/home/centerx:9.6/centery:-38.8/zoom:10',
+          'APIVIA': 'https://www.marinetraffic.com/en/ais/home/centerx:33.5/centery:-40.9/zoom:10',
+          'CAM': 'https://www.marinetraffic.com/en/ais/home/centerx:22.811/centery:-38.680/zoom:12',
+          'ARKEA': 'https://www.marinetraffic.com/en/ais/home/centerx:21.551/centery:-41.405/zoom:14',
+          'MAITRE': 'https://www.marinetraffic.com/en/ais/home/centerx:21.785/centery:-39.828/zoom:12',
+          'BURTON': 'https://www.marinetraffic.com/en/ais/home/centerx:25.9/centery:-43.7/zoom:10'
           }
