@@ -53,10 +53,13 @@ def unpack_boats(boats_response: List) -> List[Dict]:
     """
     pleasures = []
     for boatdata in boats_response:
-        try:
-            item_dict = json.loads(boatdata)
-        except json.decoder.JSONDecodeError:
-            continue
+        if isinstance(boatdata, bytes):
+            try:
+                item_dict = json.loads(boatdata)
+            except json.decoder.JSONDecodeError:
+                continue
+        else:
+            item_dict = boatdata
         if type(item_dict) is not dict:
             continue
         test = item_dict.get('data')

@@ -14,6 +14,8 @@ from src.plot import plot
 import src.utils
 from src.geojson_creator import create_geojson
 
+
+
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--headless')

@@ -1,5 +1,5 @@
 from unittest import TestCase
-import utils
+import src.utils as utils
 import datetime
 
 request = b'{"type":1,"data":{"rows":[{"LAT":"-42.8567","LON":"-29.80231","SPEED":"122","COURSE":"82","HEADING":"82",' \
@@ -53,31 +53,18 @@ request = b'{"type":1,"data":{"rows":[{"LAT":"-42.8567","LON":"-29.80231","SPEED
           b'"COURSE":"110","HEADING":"110","ELAPSED":"264","SHIPNAME":"[SAT-AIS]","SHIPTYPE":"9",' \
           b'"SHIP_ID":"Tmpjek56YzNOamN6TnpjM05qY3pOdz09LXBjdmdFcERFNjdWaUdqSDIvV3BORnc9PQ==","TYPE_IMG":"9",' \
           b'"TYPE_NAME":"Pleasure Craft","STATUS_NAME":"Unknown"}],"areaShips":17}} '
-response = [{'LAT': '-39.67762', 'LON': '-9.14808', 'SPEED': '240', 'COURSE': '94', 'HEADING': '94', 'ELAPSED': 17,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            {'LAT': '-39.92724', 'LON': '-6.348073', 'SPEED': '196', 'COURSE': '112', 'HEADING': '112', 'ELAPSED': 124,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            {'LAT': '-39.95451', 'LON': '-7.403518', 'SPEED': '152', 'COURSE': '91', 'HEADING': '91', 'ELAPSED': 111,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            {'LAT': '-40.81548', 'LON': '-7.297678', 'SPEED': '143', 'COURSE': '96', 'HEADING': '96', 'ELAPSED': 15,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '133', 'COURSE': '110', 'HEADING': '110', 'ELAPSED': 264,
-             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9', 'TYPE_NAME': 'Pleasure Craft',
-             'STATUS_NAME': 'Unknown'},
-            ]
+response = [{'LAT': '-39.67762', 'LON': '-9.14808', 'SPEED': '240', 'COURSE': '94', 'HEADING': '94', 'ELAPSED': 17},
+        {'LAT': '-39.92724', 'LON': '-6.348073', 'SPEED': '196', 'COURSE': '112', 'HEADING': '112', 'ELAPSED': 124},
+        {'LAT': '-39.95451', 'LON': '-7.403518', 'SPEED': '152', 'COURSE': '91', 'HEADING': '91', 'ELAPSED': 111},
+        {'LAT': '-40.81548', 'LON': '-7.297678', 'SPEED': '143', 'COURSE': '96', 'HEADING': '96', 'ELAPSED': 15},
+        {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '133', 'COURSE': '110', 'HEADING': '110', 'ELAPSED': 264}]
 
-for boatdata in response:
-    tm = datetime.datetime.now()
-    tm = tm - datetime.timedelta(minutes=int(boatdata['ELAPSED']), seconds=tm.second,
-                                 microseconds=tm.microsecond)
-    boatdata['ELAPSED'] = tm.timestamp()
+
+
 
 
 class Test(TestCase):
+
     def test_calculate_distance(self):
         self.assertAlmostEqual(utils.EarthFunctions.calculate_distance((0, 0), (1, 1)), 84.9079932, 3)
         self.assertAlmostEqual(utils.EarthFunctions.calculate_distance((2, 3), (4, 5)), 169.6996215, 3)
@@ -88,6 +75,7 @@ class Test(TestCase):
         self.assertAlmostEqual(lon, 0.548271, 3)
 
     def test_unpack_boats(self):
+        self.maxDiff = None
         self.assertListEqual(utils.unpack_boats([b'{}']), [])
         self.assertListEqual(utils.unpack_boats([b'180731']), [])
         self.assertListEqual(utils.unpack_boats([
@@ -111,13 +99,20 @@ class Test(TestCase):
             b'"SHIP_ID":"T1RrME5qa3dPVGswTmprd09UazBOZz09LWlFYm91cHZkZ1BZamtKbG50SkpacFE9PQ==","TYPE_IMG":"2",'
             b'"TYPE_NAME":"Fishing","STATUS_NAME":"Unknown"}],"areaShips":6}}']),
             [])
+        for boatdata in response:
+            tm = datetime.datetime.now()
+            tm = tm - datetime.timedelta(minutes=int(boatdata['ELAPSED']), seconds=tm.second,
+                                         microseconds=tm.microsecond)
+            boatdata['ELAPSED'] = tm.timestamp()
+        print(utils.unpack_boats([request]))
         self.assertListEqual(utils.unpack_boats([request]), response)
 
     def test_handle_data(self):
+
         self.assertEqual(utils.handle_data('TEST',
                                            {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '133', 'COURSE': '110',
                                             'HEADING': '110', 'ELAPSED': 1606658751,
                                             'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9',
                                             'TYPE_NAME': 'Pleasure Craft',
                                             'STATUS_NAME': 'Unknown'}),
-                         'TEST--------->LAT:  -41.1235 LON:  -5.11850, SPEED: 13.3, HEADING: 110, TIME: 2020-11-29 15:05:51')
+                         'TEST--------->LAT:  -41.1235 LON:   -5.1185, SPEED: 13.3, HEADING: 110°, TIME: 2020-11-29 15:05:51')
