@@ -25,17 +25,24 @@ Install Python (duh)
 
 Install requirements : `pip install requirements.txt`
 
+Since marinetraffic is protected by cloudflare, i used cfscrape to bypass it. In the requirements it is stated that you need to have nodejs installed.
+
+So if the program crashes, either install nodejs or launch it with -sel flag, to use the legacy selenium retreival.
+
+
 Delete `data.json`
 
-Enter marinetraffic links in `config.py` files
+Enter marinetraffic links in `config.py` files. Selenium supports all zooms, the cfscrape one only zoom 6 and zoom 10
 
-Launch `main.py` [-r] [-d]
+Launch `main.py` [-r] [-d] [-sel]
 
 The optional parameters:
 
 -r reads only the urls provided in config, without touching the data stored previously.
 
 -d enables debug logs.
+
+-sel Forces usage of selenium backend.
 
 Script will keep running until stopped (1 run every 10 minutes).
 
