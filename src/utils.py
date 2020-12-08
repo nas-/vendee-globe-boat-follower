@@ -1,12 +1,9 @@
 import datetime
 import json
-import time
-from typing import Tuple, List, Dict, Union
 import logging
+from typing import Tuple, List, Dict, Union
 
 from geopy import distance
-from selenium import webdriver
-from selenium.common.exceptions import TimeoutException
 
 logger = logging.getLogger('Main')
 
@@ -63,9 +60,7 @@ def unpack_boats(boats_response: List) -> List[Dict]:
         if type(item_dict) is not dict:
             continue
         test = item_dict.get('data')
-        if test is None:
-            continue
-        elif type(test) == str:
+        if test is None or type(test) == str:
             continue
         else:
             rows = test.get('rows')
@@ -73,11 +68,22 @@ def unpack_boats(boats_response: List) -> List[Dict]:
             ship_kind = row.get('TYPE_NAME')
             if ship_kind == 'Pleasure Craft':
                 pleasures.append(row)
-    pleasures_no_shipID = []
-    for d in pleasures:
-        pleasures_no_shipID.append({k: v for k, v in d.items() if
-                                    k not in ['SHIP_ID', 'STATUS_NAME', 'TYPE_IMG', 'SHIPNAME', 'SHIPTYPE',
-                                              'TYPE_NAME', 'INVALID_DIMENSIONS']})
+    pleasures_no_shipID = [
+        {
+            k: v
+            for k, v in d.items()
+            if k not in [
+                   'SHIP_ID',
+                   'STATUS_NAME',
+                   'TYPE_IMG',
+                   'SHIPNAME',
+                   'SHIPTYPE',
+                   'TYPE_NAME',
+                   'INVALID_DIMENSIONS']
+        }
+        for d in pleasures
+    ]
+
     pleasuresDeduplicates = [dict(t) for t in {tuple(d.items()) for d in pleasures_no_shipID}]
     for boatdata in pleasuresDeduplicates:
         tm = datetime.datetime.now()
@@ -112,13 +118,16 @@ def save_data(boatname: str, boatdict: Dict, datafile: Dict = None) -> None:
     :param datafile: Content of the file.
     """
     if datafile:
-        datafile[boatname].append(boatdict)
+        if boatname in datafile.keys():
+            datafile[boatname].append(boatdict)
+        else:
+            datafile[boatname] = [boatdict]
         with open('src/data.json', 'w') as outfile:
             json.dump(datafile, outfile, indent=2)
 
 
 def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data: List[Dict], datafile: Dict) -> Union[
-    Tuple[None, List[dict]], Tuple[str, List[dict]]]:
+                                        Tuple[None, List[dict]], Tuple[str, List[dict]]]:
     """
     Function that take in the previous recorded point for the boat, the boat name, and all the data got from MT.
     It calculates where the boat should be now.
@@ -154,30 +163,25 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
 
     if mostProbableBoat.get('ELAPSED') - prevpoint.get('ELAPSED') < 100:
         logger.info(f'{item} No new positions')
-        boat_data.remove(mostProbableBoat)
-        return item, boat_data
     elif mostProbableBoat.get('LON') == prevpoint.get('LON') and mostProbableBoat.get('LAT') == prevpoint.get('LAT'):
         logger.info(f'{item} Position is the same as last recorded.')
-        boat_data.remove(mostProbableBoat)
-        return item, boat_data
     else:
         handle_data(item, boat_data[distances.index(min(distances))])
         save_data(item, boat_data[distances.index(min(distances))], datafile)
-        boat_data.remove(mostProbableBoat)
-        return item, boat_data
+    boat_data.remove(mostProbableBoat)
+    return item, boat_data
 
 
-def get_data_from_prevpoint(d: webdriver, prevpoint: Dict, item: str, datafile: Dict) -> Union[
-    Tuple[None, None], Tuple[str, List[dict]]]:
+def get_data_from_prevpoint(d, prevpoint: Dict, item: str, datafile: Dict) -> Union[
+                            Tuple[None, None], Tuple[str, List[dict]]]:
     """
 
-    :param d: webdriver
+    :param d: webdriver or Scrape
     :param prevpoint: Dictionary containg data from previous point.
     :param item:  Boat name
     :param datafile: all the data from the file as dict
     :return: Tuple Boatname-boatdata
     """
-    del d.requests
     timeElapsed = datetime.datetime.now() - datetime.datetime.fromtimestamp(int(prevpoint.get('ELAPSED')))
     miles_done = int(prevpoint.get('SPEED')) / 10 * timeElapsed.total_seconds() / 3600  # nm
     lon, lat = EarthFunctions.gcd((float(prevpoint.get('LON')), float(prevpoint.get('LAT'))),
@@ -185,19 +189,11 @@ def get_data_from_prevpoint(d: webdriver, prevpoint: Dict, item: str, datafile: 
 
     url = f'https://www.marinetraffic.com/en/ais/home/centerx:{round(lon, 3)}/centery:{round(lat, 3)}/zoom:10'
     # TODO: Modify this.
-    try:
-        d.get(url)
-    except TimeoutException:
-        logger.critical('Timeout eception. Cannot get data')
-        return None, None
-    d.refresh()
-    time.sleep(10)
-    req_boats = req_boat(d.requests)
-    _boats = unpack_boats(req_boats)
+    _boats = d.request_marinetrafic_url(url, do_req=True)
     if not _boats:
-        time.sleep(10)
-        req_boats = req_boat(d.requests)
-        _boats = unpack_boats(req_boats)
+        logger.debug(f'{item} - No boats in zoom 10. Trying zoom 6.')
+        url = f'https://www.marinetraffic.com/en/ais/home/centerx:{round(lon, 3)}/centery:{round(lat, 3)}/zoom:6'
+        _boats = d.request_marinetrafic_url(url, do_req=True)
     if not _boats:
         logger.warning(f'{item} No positions. Cannot get data.')
         return None, None

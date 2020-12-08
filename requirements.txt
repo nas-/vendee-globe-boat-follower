@@ -7,3 +7,4 @@ selenium-wire
 mitmproxy
 geopy~=2.0.0
 geojson~=2.5.0
+cfscrape~=2.1.1

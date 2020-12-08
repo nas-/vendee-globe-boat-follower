@@ -11,7 +11,7 @@ def plot(data_file: Dict) -> None:
 
     :type data_file: Dict
     """
-    sns.set(rc={'figure.figsize': (11.7, 8.27)})
+    sns.set(rc={'figure.figsize': (23.4, 16.54)})
     df = pd.DataFrame()
     for record in data_file:
         data = data_file.get(record)
@@ -30,7 +30,7 @@ def plot(data_file: Dict) -> None:
 
     plt.figure(figsize=(20, 10))
     sns_plot = sns.scatterplot(data=df, x='LON', y='LAT', style='BOAT', markers=markers, hue='SPEED', size='SPEED')
-    for line in range(0, df.shape[0]):
+    for line in range(df.shape[0]):
         sns_plot.text(df['LON'][line] + 0.02, df['LAT'][line],
                       df['SPEED'][line], horizontalalignment='left',
                       size='small', color='black')

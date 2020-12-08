@@ -1,15 +1,13 @@
-import geojson
-import json
-from geojson import Feature, Point, FeatureCollection
 import datetime
-import pandas as pd
-from gpx_converter import Converter
+import json
+
+from geojson import Feature, Point, FeatureCollection
 
 
-def create_geojson(datafile):
+def create_geojson(_datafile):
     list_of_features = []
-    for item in datafile:
-        points = datafile.get(item)
+    for item in _datafile:
+        points = _datafile.get(item)
         if not points:
             continue
         data = points[-1]
@@ -22,7 +20,7 @@ def create_geojson(datafile):
 
     A = FeatureCollection(list_of_features)
 
-    with open('../positions.geojson', 'w') as outfile:
+    with open('./positions.geojson', 'w') as outfile:
         json.dump(A, outfile)
 
 
