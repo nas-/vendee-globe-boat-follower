@@ -38,6 +38,7 @@ class EarthFunctions:
         Latitude(Negative for southern emisphere)
         Longitude(Negative for western emisphere)
         """
+        logger.debug(f' {origin}, {bearing}')
         destination = distance.great_circle(nautical=dist).destination(origin, bearing)
         return destination.latitude, destination.longitude
 
@@ -184,7 +185,7 @@ def get_data_from_prevpoint(d, prevpoint: Dict, item: str, datafile: Dict) -> Un
     """
     timeElapsed = datetime.datetime.now() - datetime.datetime.fromtimestamp(int(prevpoint.get('ELAPSED')))
     miles_done = int(prevpoint.get('SPEED')) / 10 * timeElapsed.total_seconds() / 3600  # nm
-    lon, lat = EarthFunctions.gcd((float(prevpoint.get('LON')), float(prevpoint.get('LAT'))),
+    lon, lat = EarthFunctions.gcd((float(prevpoint.get('LAT')), float(prevpoint.get('LON'))),
                                   int(prevpoint.get('COURSE')), miles_done)
 
     url = f'https://www.marinetraffic.com/en/ais/home/centerx:{round(lon, 3)}/centery:{round(lat, 3)}/zoom:10'
