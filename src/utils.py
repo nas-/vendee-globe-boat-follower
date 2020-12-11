@@ -74,13 +74,13 @@ def unpack_boats(boats_response: List) -> List[Dict]:
             k: v
             for k, v in d.items()
             if k not in [
-                   'SHIP_ID',
-                   'STATUS_NAME',
-                   'TYPE_IMG',
-                   'SHIPNAME',
-                   'SHIPTYPE',
-                   'TYPE_NAME',
-                   'INVALID_DIMENSIONS']
+                'SHIP_ID',
+                'STATUS_NAME',
+                'TYPE_IMG',
+                'SHIPNAME',
+                'SHIPTYPE',
+                'TYPE_NAME',
+                'INVALID_DIMENSIONS']
         }
         for d in pleasures
     ]
@@ -128,7 +128,7 @@ def save_data(boatname: str, boatdict: Dict, datafile: Dict = None) -> None:
 
 
 def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data: List[Dict], datafile: Dict) -> Union[
-                                        Tuple[None, List[dict]], Tuple[str, List[dict]]]:
+    Tuple[None, List[dict]], Tuple[str, List[dict]]]:
     """
     Function that take in the previous recorded point for the boat, the boat name, and all the data got from MT.
     It calculates where the boat should be now.
@@ -152,7 +152,11 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
     if not distances:
         logger.warning(f'{item} - Distances is an empty sequence')
         return None, boat_data
-    mostProbableBoat = boat_data[distances.index(min(distances))]
+    # TODO check here if boat is already present in another part of dict.
+    mostProbableBoat = search_for_duplicate(distances, boat_data, datafile, item)
+    if not mostProbableBoat:
+        print('Position is the same')
+        return None, boat_data
 
     if min(distances) > MINDISANCE:
         logger.debug(f'{item}: Should be {(lat, lon)},is {mostProbableBoat.get("LAT"), mostProbableBoat.get("LON")}'
@@ -161,7 +165,6 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
     if mostProbableBoat.get('SPEED') == '0':
         logger.debug(f'{item}: Speed = 0, probably fake data')
         return None, boat_data
-
     if mostProbableBoat.get('ELAPSED') - prevpoint.get('ELAPSED') < 100:
         logger.info(f'{item} No new positions')
     elif mostProbableBoat.get('LON') == prevpoint.get('LON') and mostProbableBoat.get('LAT') == prevpoint.get('LAT'):
@@ -174,7 +177,7 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
 
 
 def get_data_from_prevpoint(d, prevpoint: Dict, item: str, datafile: Dict) -> Union[
-                            Tuple[None, None], Tuple[str, List[dict]]]:
+    Tuple[None, None], Tuple[str, List[dict]]]:
     """
 
     :param d: webdriver or Scrape
@@ -216,3 +219,23 @@ def req_boat(requests) -> List:
             except AttributeError:
                 continue
     return req_boats
+
+
+def search_for_duplicate(distances: List, boat_data: List, datafile: Dict, item: str):
+    if not distances:
+        return
+    keys = ['LAT', 'LON', 'SPEED', 'COURSE', 'HEADING']
+    mostProbableBoat = boat_data[distances.index(min(distances))]
+    if len(distances) == 1:
+        return mostProbableBoat
+    for a in datafile:
+        for b in datafile[a]:
+            if all(b.get(c) == mostProbableBoat.get(c) for c in keys):
+                if b == a:
+                    logger.debug(f'{item} has the same position a previously')
+                    return None
+                distances[distances.index(min(distances))] = 400000
+                logger.debug(f'{item} Position {b} is already used by {a}.')
+                return boat_data[distances.index(min(distances))]
+    logger.debug(f'{item} no duplicates found')
+    return mostProbableBoat

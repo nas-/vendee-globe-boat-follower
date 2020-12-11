@@ -6,10 +6,10 @@ import random
 from typing import Dict
 
 
-def plot(data_file: Dict) -> None:
+def plot(data_file: Dict, number_of_points: int) -> None:
     """
-
-    :type data_file: Dict
+    :param number_of_points: number of points per boat to plot
+    :type data_file: Dictionary of all boat values
     """
     sns.set(rc={'figure.figsize': (23.4, 16.54)})
     df = pd.DataFrame()
@@ -27,18 +27,24 @@ def plot(data_file: Dict) -> None:
     for boat in all_boats:
         if boat not in markers.keys():
             markers[boat] = random.choice(all_markers)
-
+    df = df.sort_values('ELAPSED').groupby('BOAT').tail(number_of_points).reset_index(drop=True)
     plt.figure(figsize=(20, 10))
     sns_plot = sns.scatterplot(data=df, x='LON', y='LAT', style='BOAT', markers=markers, hue='SPEED', size='SPEED')
-    for line in range(df.shape[0]):
+    labels = set()
+    for line in range(0, df.shape[0], 5):
+        if df['BOAT'][line] not in labels:
+            sns_plot.text(df['LON'][line] - 2, df['LAT'][line],
+                          df['BOAT'][line])
+            labels.add(df['BOAT'][line])
         sns_plot.text(df['LON'][line] + 0.02, df['LAT'][line],
                       df['SPEED'][line], horizontalalignment='left',
                       size='small', color='black')
 
     sns_plot.get_figure().savefig("output.png")
+    plt.close()
 
 
 if __name__ == "__main__":
     with open('data.json') as json_file:
         datafile = json.load(json_file)
-    plot(datafile)
+    plot(datafile, 100)

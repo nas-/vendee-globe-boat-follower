@@ -74,8 +74,13 @@ class Test(TestCase):
 
     def test_great_circle_destination(self):
         lat, lon = utils.EarthFunctions.gcd((52.20472, 0.14056), 90, 15)
+        lat1, lon1 = utils.EarthFunctions.gcd((-50, 120), 90, 100)
         self.assertAlmostEqual(lat, 52.20444, 3)
         self.assertAlmostEqual(lon, 0.548271, 3)
+        self.assertAlmostEqual(lat1, -49.97116, 3)
+        self.assertAlmostEqual(lon1, 122.59008, 3)
+        self.assertAlmostEqual(utils.EarthFunctions.gcd((-50, 85), 90, 500)[0], -49.28531426597719, 3)
+        self.assertAlmostEqual(utils.EarthFunctions.gcd((-50, 85), 90, 500)[1], 97.82884551047957, 3)
 
     def test_unpack_boats(self):
         self.assertListEqual(utils.unpack_boats([b'{}']), [])
@@ -129,3 +134,21 @@ class Test(TestCase):
                                             'TYPE_NAME': 'Pleasure Craft',
                                             'STATUS_NAME': 'Unknown'}),
                          'TEST--------->LAT:  -41.1000 LON:    5.0000, SPEED: 13.3, HEADING: 259°, TIME: 2020-11-29 15:05:51')
+
+    def test_search_for_duplicate(self):
+        datafile = {'LINKED': [
+            {'LAT': '-37.88772', 'LON': '74.84464', 'SPEED': '101', 'COURSE': '68', 'HEADING': '68',
+             'ELAPSED': 1607428380.0},
+            {'LAT': '-37.87993', 'LON': '74.88072', 'SPEED': '133', 'COURSE': '70', 'HEADING': '70',
+             'ELAPSED': 1607429460.0}]}
+        distances = [0, 1]
+        boatdata = [
+            {'LAT': '-37.88772', 'LON': '74.84464', 'SPEED': '101', 'COURSE': '68', 'HEADING': '68',
+             'ELAPSED': 1607428380.0},
+            {'LAT': '-37.87994', 'LON': '74.88072', 'SPEED': '133', 'COURSE': '70', 'HEADING': '70',
+             'ELAPSED': 1607429460.0}]
+        item = 'cremer'
+        # print(utils.search_for_duplicate(distances, boatdata, datafile, item))
+        self.assertEqual(utils.search_for_duplicate(distances, boatdata, datafile, item),
+                         {'LAT': '-37.87994', 'LON': '74.88072', 'SPEED': '133', 'COURSE': '70', 'HEADING': '70',
+                          'ELAPSED': 1607429460.0})

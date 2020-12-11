@@ -82,9 +82,15 @@ def mainloop(refresh=None, selenium=None) -> None:
         if not boats:
             logger.debug(f'{item} --> Not found :( - Trying again')
             boats = marinetraffic_instance.request_marinetrafic_url(CONFIG.get(item), do_req=True)
+        _distances = [src.utils.EarthFunctions.calculate_distance((float(boat.get('LAT')), float(boat.get('LON'))),
+                                                                  (latitudey, longitudex)) for boat in boats]
+        _mostProbableBoat = src.utils.search_for_duplicate(_distances, boats, datafile, item)
+        if not _mostProbableBoat:
+            continue
         if not boats:
-            logger.debug(f'{item} --> Not found :( - Trying again - Definitive')
+            logger.debug(f'{item} --> Not found :(. Skipping')
         elif len(boats) == 1:
+            # TODO check if same position.
             print(src.utils.handle_data(item, boats[0]))
             try:
                 if boats[0] == datafile.get(item)[-1]:
@@ -98,11 +104,14 @@ def mainloop(refresh=None, selenium=None) -> None:
             logger.info(f'{item} more than 1 value detected. Picking closest to the center')
             distances = [src.utils.EarthFunctions.calculate_distance((float(boat.get('LAT')), float(boat.get('LON'))),
                                                                      (latitudey, longitudex)) for boat in boats]
-            # emty
-
-            mostProbableBoat = boats[distances.index(min(distances))]
-            print(src.utils.handle_data(item, mostProbableBoat))
-            src.utils.save_data(item, mostProbableBoat, datafile)
+            mostProbableBoat = src.utils.search_for_duplicate(distances, boats, datafile, item)
+            # todo check if same position
+            if mostProbableBoat:
+                print('aaaaaaaaaa')
+                print(src.utils.handle_data(item, mostProbableBoat))
+                src.utils.save_data(item, mostProbableBoat, datafile)
+            else:
+                print('DUpolicata')
 
     marinetraffic_instance.cleanup()
 
@@ -112,12 +121,12 @@ def mainloop(refresh=None, selenium=None) -> None:
         if datafile[item]:
             print(src.utils.handle_data(item, datafile[item][-1]))
     print('----------------------')
-    plot(datafile)
+    plot(datafile, 25)
     create_geojson(datafile)
 
 
 if __name__ == "__main__":
-    WAIT_TIME_SECONDS = 900
+    WAIT_TIME_SECONDS = 60
 
     parser = argparse.ArgumentParser(description='Starts the process.')
     parser.add_argument('-r', '--refresh', action='store_true', help="Uses only the position specified in config")
@@ -128,20 +137,10 @@ if __name__ == "__main__":
     if args.debug:
         logger = logging.getLogger('Main')
         logger.setLevel(logging.DEBUG)
-        c_handler = logging.StreamHandler()
-        c_handler.setLevel(logging.DEBUG)
-        c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
-        c_handler.setFormatter(c_format)
-        logger.addHandler(c_handler)
         logger.debug('Setting level to debug')
     else:
-        logger = logging.getLogger(__name__)
+        logger = logging.getLogger('Main')
         logger.setLevel(logging.INFO)
-        c_handler = logging.StreamHandler()
-        c_handler.setLevel(logging.INFO)
-        c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
-        c_handler.setFormatter(c_format)
-        logger.addHandler(c_handler)
         logger.info('Setting level to info')
 
     args2 = {'refresh': args.refresh, 'selenium': args.selenium}
