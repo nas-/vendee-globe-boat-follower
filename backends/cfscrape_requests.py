@@ -3,7 +3,11 @@ from src.utils import unpack_boats
 import re
 import logging
 
+from ratelimit import limits, RateLimitException
+from backoff import on_exception, expo
+
 logger = logging.getLogger('Main')
+
 
 class Scrape(cfscrape.Session):
     def __init__(self):
@@ -12,6 +16,8 @@ class Scrape(cfscrape.Session):
         self.session = cfscrape.create_scraper()
         self.session.get("http://marinetraffic.com", headers=headers)
 
+    @on_exception(expo, RateLimitException, max_tries=8)
+    @limits(calls=10, period=2)
     def request_marinetraffic_coordinate(self, x, y, zoom, do_req=False, **kwargs):
         url_referrer = f'https://www.marinetraffic.com/en/ais/home/centerx:{x:.1f}/centery:{y:.1f}/zoom:{zoom}'
 
@@ -36,8 +42,9 @@ class Scrape(cfscrape.Session):
             X = round(X_coeff[0] + X_coeff[1] * x)
             Y = round(Y_coeff[0] + Y_coeff[1] * y + Y_coeff[2] * y ** 2 + Y_coeff[3] * y ** 3)
         else:
-            raise Exception(f"\n\nSupported Zoom levels: 6, 10. Current value={zoom}.Change or use -sel to fall back to "
-                            f"the selenium backend.\n Url={url_referrer}")
+            raise Exception(
+                f"\n\nSupported Zoom levels: 6, 10. Current value={zoom}.Change or use -sel to fall back to "
+                f"the selenium backend.\n Url={url_referrer}")
 
         Xs = [X - 1, X, X + 1]
         Ys = [Y - 1, Y, Y + 1]

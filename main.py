@@ -6,114 +6,98 @@ import argparse
 import logging
 import re
 
-from config import CONFIG
 from src.plot import plot
 import src.utils
 from src.geojson_creator import create_geojson
+from src.scrape_rankings import handle_rankings
 
 from backends.cfscrape_requests import Scrape
 from backends.seleniumwire_requests import ScrapeSelenium
 
 
+class MegaClass(object):
+    def __init__(self, fleet_positions, datafile, url, marinetraffic_instance, boat_name,
+                 refresh=False):
+        self.fleet_positions = fleet_positions
+        self.all_positions = datafile
+        self.refresh = refresh
+        self.boat_name = boat_name
+        self.previous_positions = self.all_positions.get(self.boat_name)
+        if url:
+            pattern = r'centerx:([-\d.]{4,7}).+centery:([-\d.]{4,7}).zoom:(\d{1,2})'
+            self.longitude, self.latitude, self.zoom = map(float, re.findall(pattern, url)[0])
+        else:
+            self.longitude, self.latitude, self.zoom = None, None, None
+        self.instance = marinetraffic_instance
+
+    def get_new_positions(self):
+        status = ''
+        if (not self.refresh) and self.previous_positions:
+            _, boats_current_position, status = src.utils.get_data_from_prevpoint_with_boat_data(
+                self.previous_positions[-1],
+                self.boat_name,
+                self.fleet_positions,
+                self.all_positions)
+            if status == 'OK':
+                return
+            else:
+                _, boats_current_position, status = src.utils.get_data_from_prevpoint(self.instance,
+                                                                                      self.previous_positions[-1],
+                                                                                      self.boat_name,
+                                                                                      self.all_positions)
+
+            if status == 'OK':
+                return
+
+        if (self.refresh or not self.previous_positions or status != 'OK') and self.latitude:
+            return self.request_and_get_closest_to_center()
+
+    def request_and_get_closest_to_center(self):
+        boats_in_area = self.instance.request_marinetraffic_coordinate(self.longitude, self.latitude, self.zoom,
+                                                                       do_req=True)
+        if not boats_in_area:
+            return None
+        distances_to_center = [
+            src.utils.EarthFunctions.calculate_distance((boat.get('LAT'), boat.get('LON')),
+                                                        (self.latitude, self.longitude)) for boat in boats_in_area]
+
+        _mostProbableBoat, status = src.utils.search_for_duplicate(distances_to_center, boats_in_area,
+                                                                   self.all_positions,
+                                                                   self.boat_name)
+        if _mostProbableBoat:
+            src.utils.save_data(self.boat_name, _mostProbableBoat, self.all_positions)
+            return _mostProbableBoat
+        return None
+
+
 def mainloop(refresh=None, selenium=None) -> None:
     """
-    :param refresh: If true, use only links in config.py.
+    :param refresh: If true, use only links in config.json.
     :param selenium: Uses legacy selenium backend
     """
+    with open('config.json') as json_file:
+        CONFIG = json.load(json_file)
 
     marinetraffic_instance = ScrapeSelenium() if selenium else Scrape()
 
     logger.info(f'starting run {datetime.datetime.now()}')
-    if not os.path.isfile('src/data.json'):
-        open('src/data.json', 'w+').write('{"BOSS":[]}')
+
+    handle_rankings()
 
     with open('src/data.json') as json_file:
         datafile = json.load(json_file)
+
     boats_to_retrieve = [item for item in CONFIG]
-    boats_to_remove = []
-
-    if not refresh:
-        # Higher zooms give better results. Lower zooms cover more maparea.
-        boats = marinetraffic_instance.request_marinetrafic_url(
-            'https://www.marinetraffic.com/en/ais/home/centerx:80.0/centery:-39.6/zoom:6', do_req=True)
-        if not boats:
-            boats = marinetraffic_instance.request_marinetrafic_url(
-                'https://www.marinetraffic.com/en/ais/home/centerx:80.0/centery:-39.6/zoom:6', do_req=True)
-
-        for item in boats_to_retrieve:
-            if not datafile.get(item):
-                datafile[item] = []
-                prevpoints = []
-            else:
-                prevpoints = datafile[item]
-            if prevpoints:
-                selected_boat, boats = src.utils.get_data_from_prevpoint_with_boat_data(prevpoints[-1], item, boats,
-                                                                                        datafile)
-                if selected_boat:
-                    boats_to_remove.append(item)
-
-        boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
-        boats_to_remove = []
-        logger.info(f'finished_general retrieval - missing {boats_to_retrieve}')
-
-        for item in boats_to_retrieve:
-            if not datafile.get(item):
-                datafile[item] = []
-                prevpoints = []
-            else:
-                prevpoints = datafile[item]
-            if prevpoints:
-                lastdata = prevpoints[-1]
-
-                a, b = src.utils.get_data_from_prevpoint(marinetraffic_instance, lastdata, item,
-                                                         datafile)
-                if a:
-                    boats_to_remove.append(item)
-
-        boats_to_retrieve = list(set(boats_to_retrieve) - set(boats_to_remove))
-        logger.info(f'finished retrieval based on last position - missing {boats_to_retrieve}')
-
-    pattern = r'centerx:([-\d.]{4,7}).+centery:([-\d.]{4,7}).zoom:(\d{1,2})'
+    fleet_positions = marinetraffic_instance.request_marinetrafic_url(
+        'https://www.marinetraffic.com/en/ais/home/centerx:147.6/centery:-53.4/zoom:6', do_req=True)
     for item in boats_to_retrieve:
-        longitudex, latitudey, zoom = re.findall(pattern, CONFIG.get(item))[0]
-        longitudex = float(longitudex)
-        latitudey = float(latitudey)
-        boats = marinetraffic_instance.request_marinetrafic_url(CONFIG.get(item), do_req=True)
-        if not boats:
-            logger.debug(f'{item} --> Not found :( - Trying again')
-            boats = marinetraffic_instance.request_marinetrafic_url(CONFIG.get(item), do_req=True)
-        _distances = [src.utils.EarthFunctions.calculate_distance((float(boat.get('LAT')), float(boat.get('LON'))),
-                                                                  (latitudey, longitudex)) for boat in boats]
-        _mostProbableBoat = src.utils.search_for_duplicate(_distances, boats, datafile, item)
-        if not _mostProbableBoat:
-            continue
-        if not boats:
-            logger.debug(f'{item} --> Not found :(. Skipping')
-        elif len(boats) == 1:
-            # TODO check if same position.
-            print(src.utils.handle_data(item, boats[0]))
-            try:
-                if boats[0] == datafile.get(item)[-1]:
-                    logger.info(f'{item} Position is the same as last recorded.')
-                    continue
-                else:
-                    src.utils.save_data(item, boats[0], datafile)
-            except (IndexError, TypeError):
-                src.utils.save_data(item, boats[0], datafile)
-        else:
-            logger.info(f'{item} more than 1 value detected. Picking closest to the center')
-            distances = [src.utils.EarthFunctions.calculate_distance((float(boat.get('LAT')), float(boat.get('LON'))),
-                                                                     (latitudey, longitudex)) for boat in boats]
-            mostProbableBoat = src.utils.search_for_duplicate(distances, boats, datafile, item)
-            # todo check if same position
-            if mostProbableBoat:
-                print('aaaaaaaaaa')
-                print(src.utils.handle_data(item, mostProbableBoat))
-                src.utils.save_data(item, mostProbableBoat, datafile)
-            else:
-                print('DUpolicata')
+        A = MegaClass(fleet_positions, datafile, CONFIG.get(item), marinetraffic_instance, item, refresh)
+        A.get_new_positions()
 
     marinetraffic_instance.cleanup()
+
+    with open('src/data.json') as json_file:
+        datafile = json.load(json_file)
 
     print('----------------------')
     print(f'starting run {datetime.datetime.now()}')
@@ -126,7 +110,7 @@ def mainloop(refresh=None, selenium=None) -> None:
 
 
 if __name__ == "__main__":
-    WAIT_TIME_SECONDS = 60
+    WAIT_TIME_SECONDS = 300
 
     parser = argparse.ArgumentParser(description='Starts the process.')
     parser.add_argument('-r', '--refresh', action='store_true', help="Uses only the position specified in config")
@@ -145,6 +129,11 @@ if __name__ == "__main__":
 
     args2 = {'refresh': args.refresh, 'selenium': args.selenium}
     logger.debug(f'using selenium {args.selenium}')
+
+    if not os.path.isfile('src/data.json'):
+        open('src/data.json', 'w+').write('{"BOSS":[]}')
+    if not os.path.getsize('src/data.json'):
+        open('src/data.json', 'w+').write('{"BOSS":[]}')
 
     mainloop(**args2)
     args2 = {'selenium': args.selenium}

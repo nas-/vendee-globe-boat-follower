@@ -3,6 +3,7 @@ from selenium.common.exceptions import TimeoutException
 import time
 import logging
 import src.utils
+from typing import List
 
 logger = logging.getLogger('Main')
 
@@ -43,9 +44,24 @@ class ScrapeSelenium(webdriver.Chrome):
             logger.critical(f'Timeout exception. Cannot get data')
             return
         time.sleep(15)
-        requests_boats = src.utils.req_boat(self.driver.requests)
+        requests_boats = self.req_boat(self.driver.requests)
         return src.utils.unpack_boats(requests_boats)
 
     def cleanup(self):
         self.driver.close()
         self.driver.quit()
+
+    @staticmethod
+    def req_boat(requests) -> List:
+        """
+        Filter requests for those coming from get data endpoint.
+        :type requests: LazyRequest
+        """
+        req_boats = []
+        for item in requests:
+            if item.url.startswith('https://www.marinetraffic.com/getData'):
+                try:
+                    req_boats.append(item.response.body)
+                except AttributeError:
+                    continue
+        return req_boats
