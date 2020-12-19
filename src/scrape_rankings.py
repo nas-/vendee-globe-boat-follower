@@ -27,6 +27,7 @@ def download_file(url):
         with open(local_filename, 'wb') as f:
             for chunk in r.iter_content(chunk_size=8192):
                 f.write(chunk)
+    logging.info(f'Downloaded file {local_filename}')
     return local_filename
 
 
@@ -42,7 +43,11 @@ def get_rankings():
 
     url = f'https://www.vendeeglobe.org{Current_ranking}'
     year, month, day = map(int, re.findall(r'(202\d)(\d{2})(\d{2})', Current_ranking)[0])
-    file = download_file(url)
+    try:
+        file = download_file(url)
+    except requests.exceptions.HTTPError as err:
+        logger.warning(f'Error while getting the file from vendee site: \n{err}')
+        return None
 
     df = pd.read_excel(file, skiprows=4, skipfooter=4)
     os.remove(file)

@@ -53,12 +53,13 @@ request = b'{"type":1,"data":{"rows":[{"LAT":"-42.8567","LON":"-29.80231","SPEED
           b'"COURSE":"110","HEADING":"110","ELAPSED":"264","SHIPNAME":"[SAT-AIS]","SHIPTYPE":"9",' \
           b'"SHIP_ID":"Tmpjek56YzNOamN6TnpjM05qY3pOdz09LXBjdmdFcERFNjdWaUdqSDIvV3BORnc9PQ==","TYPE_IMG":"9",' \
           b'"TYPE_NAME":"Pleasure Craft","STATUS_NAME":"Unknown"}],"areaShips":17}} '
-response = [{'LAT': '-39.67762', 'LON': '-9.14808', 'SPEED': '240', 'COURSE': '94', 'HEADING': '94', 'ELAPSED': 17},
-            {'LAT': '-39.92724', 'LON': '-6.348073', 'SPEED': '196', 'COURSE': '112', 'HEADING': '112', 'ELAPSED': 124},
-            {'LAT': '-39.95451', 'LON': '-7.403518', 'SPEED': '152', 'COURSE': '91', 'HEADING': '91', 'ELAPSED': 111},
-            {'LAT': '-40.81548', 'LON': '-7.297678', 'SPEED': '143', 'COURSE': '96', 'HEADING': '96', 'ELAPSED': 15},
-            {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '133', 'COURSE': '110', 'HEADING': '110', 'ELAPSED': 264},
-            ]
+response = [
+    {'LAT': -41.12354, 'LON': -5.118488, 'SPEED': 133, 'COURSE': 110, 'HEADING': 110, 'ELAPSED': 264},
+    {'LAT': -40.81548, 'LON': -7.297678, 'SPEED': 143, 'COURSE': 96, 'HEADING': 96, 'ELAPSED': 15},
+    {'LAT': -39.95451, 'LON': -7.403518, 'SPEED': 152, 'COURSE': 91, 'HEADING': 91, 'ELAPSED': 111},
+    {'LAT': -39.92724, 'LON': -6.348073, 'SPEED': 196, 'COURSE': 112, 'HEADING': 112, 'ELAPSED': 124},
+    {'LAT': -39.67762, 'LON': -9.14808, 'SPEED': 240, 'COURSE': 94, 'HEADING': 94, 'ELAPSED': 17},
+]
 
 for boatdata in response:
     tm = datetime.datetime.now()
@@ -110,30 +111,31 @@ class Test(TestCase):
             b'"SHIP_ID":"T1RrME5qa3dPVGswTmprd09UazBOZz09LWlFYm91cHZkZ1BZamtKbG50SkpacFE9PQ==","TYPE_IMG":"2",'
             b'"TYPE_NAME":"Fishing","STATUS_NAME":"Unknown"}],"areaShips":6}}']),
             [])
+        print(utils.unpack_boats([request]))
         self.assertListEqual(utils.unpack_boats([request]), response)
 
     def test_handle_data(self):
         self.assertEqual(utils.handle_data('TEST',
-                                           {'LAT': '-41.12354', 'LON': '-5.118488', 'SPEED': '0', 'COURSE': '0',
-                                            'HEADING': '0', 'ELAPSED': 1606658751,
-                                            'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9',
+                                           {'LAT': -41.12354, 'LON': -5.118488, 'SPEED': 0, 'COURSE': 0,
+                                            'HEADING': 0, 'ELAPSED': 1606658751,
+                                            'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': 9, 'TYPE_IMG': 9,
                                             'TYPE_NAME': 'Pleasure Craft',
                                             'STATUS_NAME': 'Unknown'}),
-                         'TEST--------->LAT:  -41.1235 LON:   -5.1185, SPEED:  0.0, HEADING:   0°, TIME: 2020-11-29 15:05:51')
+                         'TEST------------------->LAT:  -41.1235 LON:   -5.1185, SPEED:  0.0, HEADING:   0°, TIME: 2020-11-29 15:05:51')
         self.assertEqual(utils.handle_data('TEST',
-                                           {'LAT': '179.12354', 'LON': '5.118488', 'SPEED': '133', 'COURSE': '90',
-                                            'HEADING': '90', 'ELAPSED': 1606658751,
-                                            'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9',
+                                           {'LAT': 179.12354, 'LON': 5.118488, 'SPEED': 133, 'COURSE': 90,
+                                            'HEADING': 90, 'ELAPSED': 1606658751,
+                                            'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': 9, 'TYPE_IMG': 9,
                                             'TYPE_NAME': 'Pleasure Craft',
                                             'STATUS_NAME': 'Unknown'}),
-                         'TEST--------->LAT:  179.1235 LON:    5.1185, SPEED: 13.3, HEADING:  90°, TIME: 2020-11-29 15:05:51')
+                         'TEST------------------->LAT:  179.1235 LON:    5.1185, SPEED: 13.3, HEADING:  90°, TIME: 2020-11-29 15:05:51')
         self.assertEqual(utils.handle_data('TEST',
-                                           {'LAT': '-41.1', 'LON': '5', 'SPEED': '133', 'COURSE': '259',
-                                            'HEADING': '259', 'ELAPSED': 1606658751,
-                                            'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': '9', 'TYPE_IMG': '9',
+                                           {'LAT': -41.1, 'LON': 5, 'SPEED': 133, 'COURSE': 259,
+                                            'HEADING': 259, 'ELAPSED': 1606658751,
+                                            'SHIPNAME': '[SAT-AIS]', 'SHIPTYPE': 9, 'TYPE_IMG': 9,
                                             'TYPE_NAME': 'Pleasure Craft',
                                             'STATUS_NAME': 'Unknown'}),
-                         'TEST--------->LAT:  -41.1000 LON:    5.0000, SPEED: 13.3, HEADING: 259°, TIME: 2020-11-29 15:05:51')
+                         'TEST------------------->LAT:  -41.1000 LON:    5.0000, SPEED: 13.3, HEADING: 259°, TIME: 2020-11-29 15:05:51')
 
     def test_search_for_duplicate(self):
         datafile = {'LINKED': [
@@ -149,6 +151,14 @@ class Test(TestCase):
              'ELAPSED': 1607429460.0}]
         item = 'cremer'
         # print(utils.search_for_duplicate(distances, boatdata, datafile, item))
-        self.assertEqual(utils.search_for_duplicate(distances, boatdata, datafile, item),
+        self.assertEqual(utils.search_for_duplicate(distances, boatdata, datafile, item)[0],
                          {'LAT': '-37.87994', 'LON': '74.88072', 'SPEED': '133', 'COURSE': '70', 'HEADING': '70',
                           'ELAPSED': 1607429460.0})
+
+
+
+# class Test(TestCase):
+#     def test_get_data_from_prevpoint_with_boat_data(self):
+#         pass
+#         #
+# #        self.fail()

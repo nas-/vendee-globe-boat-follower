@@ -110,7 +110,7 @@ def mainloop(refresh=None, selenium=None) -> None:
 
 
 if __name__ == "__main__":
-    WAIT_TIME_SECONDS = 300
+    WAIT_TIME_SECONDS = 600
 
     parser = argparse.ArgumentParser(description='Starts the process.')
     parser.add_argument('-r', '--refresh', action='store_true', help="Uses only the position specified in config")

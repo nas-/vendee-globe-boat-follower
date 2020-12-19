@@ -2,6 +2,7 @@ import cfscrape
 from src.utils import unpack_boats
 import re
 import logging
+import requests
 
 from ratelimit import limits, RateLimitException
 from backoff import on_exception, expo
@@ -12,7 +13,8 @@ logger = logging.getLogger('Main')
 class Scrape(cfscrape.Session):
     def __init__(self):
         super().__init__()
-        headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0'}
+        headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0',
+                   'Connection': 'keep-alive'}
         self.session = cfscrape.create_scraper()
         self.session.get("http://marinetraffic.com", headers=headers)
 
@@ -69,9 +71,12 @@ class Scrape(cfscrape.Session):
         for url in urls:
             logging.debug(f'requesting Url {url}')
             if do_req:
-                session_attempt = self.session.get(url, headers=headers)
-                if not session_attempt.raise_for_status():
+                try:
+                    session_attempt = self.session.get(url, headers=headers)
+                    session_attempt.raise_for_status()
                     responses.append(session_attempt.json())
+                except requests.exceptions.HTTPError as err:
+                    logger.warning(f'MarineTraffic returned {session_attempt.status_code} - {err}')
         return unpack_boats(responses)
 
     def request_marinetrafic_url(self, url, **kwargs):
