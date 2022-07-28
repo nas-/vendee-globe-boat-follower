@@ -1,17 +1,19 @@
 import datetime
 import json
 import logging
-from typing import Tuple, List, Dict, Union
+from typing import Dict, List, Tuple, Union
 
 from geopy import distance
 
-logger = logging.getLogger('Main')
+logger = logging.getLogger("Main")
 
 
 class EarthFunctions:
     @staticmethod
-    def calculate_distance(origin: [Tuple[float, float], List[float]],
-                           destination: [Tuple[float, float], List[float]]) -> float:
+    def calculate_distance(
+        origin: [Tuple[float, float], List[float]],
+        destination: [Tuple[float, float], List[float]],
+    ) -> float:
         """
         :param origin: Starting point coordinates
         Latitude(Negative for suthern emisphere)
@@ -26,7 +28,9 @@ class EarthFunctions:
         return actual_distance.nautical
 
     @staticmethod
-    def gcd(origin: [Tuple[float, float], List[float]], bearing: float, dist: float) -> Tuple[float, float]:
+    def gcd(
+        origin: [Tuple[float, float], List[float]], bearing: float, dist: float
+    ) -> Tuple[float, float]:
         """
         :rtype: Tuple
         :param origin: Starting point coordinates
@@ -59,39 +63,46 @@ def unpack_boats(boats_response: List) -> List[Dict]:
             item_dict = boatdata
         if type(item_dict) is not dict:
             continue
-        test = item_dict.get('data')
+        test = item_dict.get("data")
         if test is None or type(test) == str:
             continue
         else:
-            rows = test.get('rows')
+            rows = test.get("rows")
         for row in rows:
-            ship_kind = row.get('TYPE_NAME')
-            if ship_kind == 'Pleasure Craft':
+            ship_kind = row.get("TYPE_NAME")
+            if ship_kind == "Pleasure Craft":
                 pleasures.append(row)
     pleasures_no_shipID = [
         {
             k: float(v)
             for k, v in d.items()
-            if k not in [
-            'SHIP_ID',
-            'STATUS_NAME',
-            'TYPE_IMG',
-            'SHIPNAME',
-            'SHIPTYPE',
-            'TYPE_NAME',
-            'INVALID_DIMENSIONS']
+            if k
+            not in [
+                "SHIP_ID",
+                "STATUS_NAME",
+                "TYPE_IMG",
+                "SHIPNAME",
+                "SHIPTYPE",
+                "TYPE_NAME",
+                "INVALID_DIMENSIONS",
+            ]
         }
         for d in pleasures
     ]
 
-    pleasuresDeduplicates = [dict(t) for t in {tuple(d.items()) for d in pleasures_no_shipID}]
+    pleasuresDeduplicates = [
+        dict(t) for t in {tuple(d.items()) for d in pleasures_no_shipID}
+    ]
     for boatdata in pleasuresDeduplicates:
         tm = datetime.datetime.now()
-        tm = tm - datetime.timedelta(minutes=int(boatdata['ELAPSED']), seconds=tm.second,
-                                     microseconds=tm.microsecond)
-        boatdata['ELAPSED'] = tm.timestamp()
+        tm = tm - datetime.timedelta(
+            minutes=int(boatdata["ELAPSED"]),
+            seconds=tm.second,
+            microseconds=tm.microsecond,
+        )
+        boatdata["ELAPSED"] = tm.timestamp()
 
-    return sorted(pleasuresDeduplicates, key=lambda i: i['LAT'])
+    return sorted(pleasuresDeduplicates, key=lambda i: i["LAT"])
 
 
 def handle_data(boatname: str, boatdict: Dict) -> str:
@@ -105,7 +116,7 @@ def handle_data(boatname: str, boatdict: Dict) -> str:
     LON = f"{round(float(boatdict.get('LON')), 4):.4f}"
     SPEED = f"{(int(boatdict.get('SPEED')) / 10):.1f}"
     HEADING = f"{boatdict.get('HEADING'):.0f}"
-    TIME = datetime.datetime.fromtimestamp(boatdict.get('ELAPSED'))
+    TIME = datetime.datetime.fromtimestamp(boatdict.get("ELAPSED"))
     string = f"LAT: {LAT:>9} LON: {LON:>9}, SPEED: {SPEED:>4}, HEADING: {HEADING:>3}°, TIME: {TIME}"
     return f"{boatname.ljust(22, '-')}->{string.rjust(80, ' ')}"
 
@@ -123,12 +134,13 @@ def save_data(boatname: str, boatdict: Dict, datafile: Dict = None) -> None:
             datafile[boatname].append(boatdict)
         else:
             datafile[boatname] = [boatdict]
-        with open('src/data.json', 'w') as outfile:
+        with open("src/data.json", "w") as outfile:
             json.dump(datafile, outfile, indent=2)
 
 
-def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data: List[Dict], datafile: Dict) -> Union[
-    tuple[None, list[dict], str], tuple[str, list[dict], str]]:
+def get_data_from_prevpoint_with_boat_data(
+    prevpoint: Dict, item: str, boat_data: List[Dict], datafile: Dict
+) -> Union[tuple[None, list[dict], str], tuple[str, list[dict], str]]:
     """
     Function that take in the previous recorded point for the boat, the boat name, and all the data got from MT.
     It calculates where the boat should be now.
@@ -143,101 +155,124 @@ def get_data_from_prevpoint_with_boat_data(prevpoint: Dict, item: str, boat_data
     :param datafile: Content of the file.
     """
     MINDISANCE = 35
-    timeElapsed = datetime.datetime.now() - datetime.datetime.fromtimestamp(prevpoint.get('ELAPSED'))
-    distance_covered = prevpoint.get('SPEED') / 10 * timeElapsed.total_seconds() / 3600  # mm
-    origin = (prevpoint.get('LAT'), prevpoint.get('LON'))
-    lat, lon = EarthFunctions.gcd(origin, prevpoint.get('COURSE'), distance_covered)
-    distances = [EarthFunctions.calculate_distance((boat.get('LAT'), boat.get('LON')), (lat, lon)) for
-                 boat in boat_data]
+    timeElapsed = datetime.datetime.now() - datetime.datetime.fromtimestamp(
+        prevpoint.get("ELAPSED")
+    )
+    distance_covered = (
+        prevpoint.get("SPEED") / 10 * timeElapsed.total_seconds() / 3600
+    )  # mm
+    origin = (prevpoint.get("LAT"), prevpoint.get("LON"))
+    lat, lon = EarthFunctions.gcd(origin, prevpoint.get("COURSE"), distance_covered)
+    distances = [
+        EarthFunctions.calculate_distance(
+            (boat.get("LAT"), boat.get("LON")), (lat, lon)
+        )
+        for boat in boat_data
+    ]
     if not distances:
-        logger.warning(f'{item} - Distances is an empty sequence')
-        return None, boat_data, 'NOK'
+        logger.warning(f"{item} - Distances is an empty sequence")
+        return None, boat_data, "NOK"
     # TODO check here if boat is already present in another part of dict.
-    logger.debug(f'{item}: running get_data_from_prevpoint_with_boat_data')
-    mostProbableBoat, status = search_for_duplicate(distances, boat_data, datafile, item)
+    logger.debug(f"{item}: running get_data_from_prevpoint_with_boat_data")
+    mostProbableBoat, status = search_for_duplicate(
+        distances, boat_data, datafile, item
+    )
     if not mostProbableBoat:
         return None, boat_data, status
 
     if min(distances) > MINDISANCE:
-        logger.debug(f'{item}: Should be {(lat, lon)},is {mostProbableBoat.get("LAT"), mostProbableBoat.get("LON")}'
-                     f' distance = {min(distances)}, too much, falling back. Out of map?')
-        return None, boat_data, 'NOK'
-    if mostProbableBoat.get('SPEED') == '0':
-        logger.debug(f'{item}: Speed = 0, probably fake data')
-        return None, boat_data, 'NOK'
-    if mostProbableBoat.get('ELAPSED') - prevpoint.get('ELAPSED') < 100:
-        logger.info(f'{item} No new positions')
-        return None, boat_data, 'OK'
-    elif mostProbableBoat.get('LON') == prevpoint.get('LON') and mostProbableBoat.get('LAT') == prevpoint.get('LAT'):
-        logger.info(f'{item} Position is the same as last recorded.')
-        return None, boat_data, 'OK'
+        logger.debug(
+            f'{item}: Should be {(lat, lon)},is {mostProbableBoat.get("LAT"), mostProbableBoat.get("LON")}'
+            f" distance = {min(distances)}, too much, falling back. Out of map?"
+        )
+        return None, boat_data, "NOK"
+    if mostProbableBoat.get("SPEED") == "0":
+        logger.debug(f"{item}: Speed = 0, probably fake data")
+        return None, boat_data, "NOK"
+    if mostProbableBoat.get("ELAPSED") - prevpoint.get("ELAPSED") < 100:
+        logger.info(f"{item} No new positions")
+        return None, boat_data, "OK"
+    elif mostProbableBoat.get("LON") == prevpoint.get("LON") and mostProbableBoat.get(
+        "LAT"
+    ) == prevpoint.get("LAT"):
+        logger.info(f"{item} Position is the same as last recorded.")
+        return None, boat_data, "OK"
     else:
         handle_data(item, boat_data[distances.index(min(distances))])
         save_data(item, boat_data[distances.index(min(distances))], datafile)
         boat_data.remove(mostProbableBoat)
-        return item, boat_data, 'OK'
+        return item, boat_data, "OK"
 
 
-def get_data_from_prevpoint(d, prevpoint: Dict, item: str, datafile: Dict) -> Union[
-    tuple[None, None, str], tuple[None, list[dict], str], tuple[str, list[dict], str]]:
+def get_data_from_prevpoint(
+    d, prevpoint: Dict, item: str, datafile: Dict
+) -> Union[
+    tuple[None, None, str], tuple[None, list[dict], str], tuple[str, list[dict], str]
+]:
     """
 
     :param d: webdriver or Scrape
-    :param prevpoint: Dictionary containg data from previous point.
+    :param prevpoint: Dictionary contains data from previous point.
     :param item:  Boat name
     :param datafile: all the data from the file as dict
     :return: Tuple Boatname-boatdata
     """
-    timeElapsed = datetime.datetime.now() - datetime.datetime.fromtimestamp(prevpoint.get('ELAPSED'))
-    miles_done = prevpoint.get('SPEED') / 10 * timeElapsed.total_seconds() / 3600  # nm
-    lat, lon = EarthFunctions.gcd((prevpoint.get('LAT'), prevpoint.get('LON')),
-                                  prevpoint.get('COURSE'), miles_done)
+    timeElapsed = datetime.datetime.now() - datetime.datetime.fromtimestamp(
+        prevpoint.get("ELAPSED")
+    )
+    miles_done = prevpoint.get("SPEED") / 10 * timeElapsed.total_seconds() / 3600  # nm
+    lat, lon = EarthFunctions.gcd(
+        (prevpoint.get("LAT"), prevpoint.get("LON")),
+        prevpoint.get("COURSE"),
+        miles_done,
+    )
 
-    url = f'https://www.marinetraffic.com/en/ais/home/centerx:{round(lon, 3)}/centery:{round(lat, 3)}/zoom:10'
+    url = f"https://www.marinetraffic.com/en/ais/home/centerx:{round(lon, 3)}/centery:{round(lat, 3)}/zoom:10"
     # TODO: Modify this.
     _boats = d.request_marinetrafic_url(url, do_req=True)
     if not _boats:
-        logger.debug(f'{item} - No boats in zoom 10. Trying zoom 6.')
-        url = f'https://www.marinetraffic.com/en/ais/home/centerx:{round(lon, 3)}/centery:{round(lat, 3)}/zoom:6'
-        logger.debug(f'{item} - {url}')
+        logger.debug(f"{item} - No boats in zoom 10. Trying zoom 6.")
+        url = f"https://www.marinetraffic.com/en/ais/home/centerx:{round(lon, 3)}/centery:{round(lat, 3)}/zoom:6"
+        logger.debug(f"{item} - {url}")
         _boats = d.request_marinetrafic_url(url, do_req=True)
     if not _boats:
-        logger.warning(f'{item} No positions. Cannot get data.')
-        return None, None, 'NOK'
+        logger.warning(f"{item} No positions. Cannot get data.")
+        return None, None, "NOK"
     # TODO End Modify
     return get_data_from_prevpoint_with_boat_data(prevpoint, item, _boats, datafile)
 
 
 def search_for_duplicate(distances: List, boat_data: List, datafile: Dict, item: str):
-    keys = ['LAT', 'LON', 'SPEED', 'COURSE', 'HEADING']
+    keys = ["LAT", "LON", "SPEED", "COURSE", "HEADING"]
     if not distances:
-        return None, 'NOK'
+        return None, "NOK"
     mostProbableBoat = boat_data[distances.index(min(distances))]
     if len(distances) == 1:
         previous_positions = datafile.get(item)
         if not previous_positions:
-            logging.debug('no previous positions')
-            return mostProbableBoat, 'OK'
+            logging.debug("no previous positions")
+            return mostProbableBoat, "OK"
         for position in previous_positions:
             if all(position.get(c) == mostProbableBoat.get(c) for c in keys):
-                logging.debug('Same position as before')
-                return None, 'OK'
+                logging.debug("Same position as before")
+                return None, "OK"
     MAXDIST = 30
     for a in datafile:
         for b in datafile[a]:
             if all(b.get(c) == mostProbableBoat.get(c) for c in keys):
                 if a == item:
-                    logging.debug(f'{item} has the same position a previously')
-                    return None, 'OK'
+                    logging.debug(f"{item} has the same position a previously")
+                    return None, "OK"
                 distances[distances.index(min(distances))] = 400000
-                logging.debug(f'{item} Position {b} is already used by {a}.')
+                logging.debug(f"{item} Position {b} is already used by {a}.")
                 if min(distances) >= MAXDIST:
                     logging.debug(
-                        f'{item} - Closest boat allowed is {min(distances)} nm away.max allowed is {MAXDIST}.')
-                    return None, 'NOK'
-                return boat_data[distances.index(min(distances))], 'OK'
-    logging.debug(f'{item} no duplicates found')
-    return mostProbableBoat, 'OK'
+                        f"{item} - Closest boat allowed is {min(distances)} nm away.max allowed is {MAXDIST}."
+                    )
+                    return None, "NOK"
+                return boat_data[distances.index(min(distances))], "OK"
+    logging.debug(f"{item} no duplicates found")
+    return mostProbableBoat, "OK"
 
 
 class BoatNotFound(ValueError):

@@ -14,7 +14,7 @@ Then for each BOAT_A, predicts where it should be based on the speed and heading
 If there is a single boat BOAT_B close to the predicted position, than probably BOAT_A and BOAT_B are the same boat.
 
 
-If the step above does not succeed, falls back at zooming in the predicted position. If there is a single boat closeby, thats it.
+If the step above does not succeed, falls back at zooming in the predicted position. If there is a single boat closeby, that's it.
 
 In the final case, it goes to the link that you entered in the config, and tries to see if there is a single entity there.
 
@@ -27,7 +27,7 @@ Install requirements : `pip install requirements.txt`
 
 Since marinetraffic is protected by cloudflare, i used cfscrape to bypass it. In the requirements it is stated that you need to have nodejs installed.
 
-So if the program crashes, either install nodejs or launch it with -sel flag, to use the legacy selenium retreival.
+So if the program crashes, either install nodejs or launch it with -sel flag, to use the legacy selenium retrieval.
 
 
 Delete `data.json`
@@ -49,5 +49,5 @@ Script will keep running until stopped (1 run every 10 minutes).
 
 Does not work very well for boats that dont send often AIS signals, and boats that are close together.
 
-If positons get mixed up, the best is to either clean up the data for that boat in data.json
+If positions, get mixed up, the best is to either clean up the data for that boat in data.json
 for example, BOSS is mixed up, delete this "BOSS":[{...},...,{...}] in data.json, enter the link from marinetraffic and restart.

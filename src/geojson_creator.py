@@ -1,7 +1,7 @@
 import datetime
 import json
 
-from geojson import Feature, Point, FeatureCollection
+from geojson import Feature, FeatureCollection, Point
 
 
 def create_geojson(_datafile):
@@ -11,16 +11,20 @@ def create_geojson(_datafile):
         if not points:
             continue
         data = points[-1]
-        my_point = Point((float(data.get('LON')), float(data.get('LAT'))))
+        my_point = Point((float(data.get("LON")), float(data.get("LAT"))))
 
-        properties = {'Name': item, 'Speed': float(data.get('SPEED')) / 10, "Heading": float(data.get('COURSE')),
-                      "Time": str(datetime.datetime.fromtimestamp(data.get('ELAPSED')))}
+        properties = {
+            "Name": item,
+            "Speed": float(data.get("SPEED")) / 10,
+            "Heading": float(data.get("COURSE")),
+            "Time": str(datetime.datetime.fromtimestamp(data.get("ELAPSED"))),
+        }
         A = Feature(geometry=my_point, properties=properties)
         list_of_features.append(A)
 
     A = FeatureCollection(list_of_features)
 
-    with open('./positions.geojson', 'w') as outfile:
+    with open("./positions.geojson", "w") as outfile:
         json.dump(A, outfile)
 
 
@@ -41,5 +45,5 @@ def create_geojson(_datafile):
 #                            output_file='your_output.gpx')
 
 if __name__ == "__main__":
-    with open('data.json') as json_file:
+    with open("data.json") as json_file:
         datafile = json.load(json_file)

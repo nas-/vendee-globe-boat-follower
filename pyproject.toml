@@ -1,0 +1,9 @@
+[tool.isort]
+profile = "black"
+
+[tool.vulture]
+exclude = ["middlewares.py"]
+make_whitelist = true
+min_confidence = 80
+paths = ["backends",'src','marinetraffic.py']
+sort_by_size = true

@@ -1,5 +1,4 @@
 import requests
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
@@ -19,7 +18,7 @@ class AnyEc:
             try:
                 if fn(driver):
                     return True
-            except:
+            except Exception:
                 pass
 
 
@@ -124,5 +123,5 @@ def scroll_into_view(d, element, offset_pixels=0):
     d.execute_script("arguments[0].scrollIntoView();", element)
 
     # compensate for the header
-    d.execute_script("window.scrollBy(0, -{});".format(offset_pixels))
+    d.execute_script(f"window.scrollBy(0, -{offset_pixels});")
     return element
